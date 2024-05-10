@@ -1,18 +1,23 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/prop-types */
-import { FaAnglesDown } from "react-icons/fa6";
+import "./DashBoardCard.css"
 
 
 
-const DashboardCard = ({ sectionName, total, recentTotal, Style }) => {
+const DashboardCard = ({ CurrentStatus, Icon, total, Style, IconBg }) => {
     return (
-        <div className={`space-y-5 border-2 text-center bg-black text-white border-teal-600 rounded-2xl mt-20 px-5 py-10 ${Style} `}>
-            <h1 className="text-3xl font-semibold" > {sectionName}</h1 >
-            <div className="pl-24">
-                <FaAnglesDown className=" text-2xl font-semibold" />
+        <div className={`space-y-5 shadow flex roll-in-left bg-[#1C2340]  justify-around   gap-2   text-white/60 border-teal-600 rounded-3xl mt-10 py-4 px-4  ${Style} `}>
+            <div className="w-1/2   text-3xl  p-4 font-semibold">
+                <div className={` rounded-full p-3  ${IconBg}`}>
+                    <p className="pl-4">{Icon}</p>
+                </div>
+                {/* <FaUserTie className=" " /> */}
             </div>
-            <p className="text-3xl font-semibold">{total}</p>
-            <p className="">last Week- {recentTotal} </p>
+            <div className="w-1/2  text-white space-y-2 text-center">
+                <p className="text-2xl font-bold ">{total}</p>
+                <p className="text-sm font-semibold ">{CurrentStatus} </p>
+            </div>
 
         </div >
     );

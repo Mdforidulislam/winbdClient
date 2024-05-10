@@ -7,8 +7,8 @@ const AdminDashboard = () => {
             <div className=" md:flex justify-center items-center  ">
 
 
-                <DashNav />
-                <div className="w-full md:w-3/4  h-full ">
+                <DashNav className="" />
+                <div className="w-full flex-grow  h-full ">
                     <Outlet></Outlet>
 
                 </div>
