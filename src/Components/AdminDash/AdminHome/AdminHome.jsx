@@ -4,13 +4,13 @@ import DashboardCard from "../../DashboardCard/DashboardCard";
 const AdminHome = () => {
     return (
         <div className="w-full h-full">
-            <div className="flex justify-between items-center px-10">
+            <div className="flex justify-between items-center px-4 text-white">
                 <div>
                     <h1 className="text-xl font-bold pb-4">Hello, Admin</h1>
                     <data className="text-slate-500 text-base font-medium ">16 March  2024</data>
                 </div>
-                <div className="space-x-4">
-                    <input className="border-2 border-slate-700 text-xl font-semibold py-2 rounded-full text-center" type="text " placeholder="Search" />
+                <div className="space-x-4 flex ">
+                    <input className="border-2 w-[400px] border-slate-700 text-xl font-semibold py-2 rounded-full text-center" type="text " placeholder="Search" />
                     <button className="btn border-2 px-4 py-2 rounded-2xl text-xl font-semibold border-stone-700 text-white bg-teal-600 hover:text-teal-600 hover:bg-white ">+ Add New Sub Admin </button>
 
                 </div>
