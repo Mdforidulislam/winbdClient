@@ -3,12 +3,12 @@ import DashNav from "../../Components/Shared/DashNav/DashNav";
 
 const AdminDashboard = () => {
     return (
-        <div className="relative w-full h-[400px] ">
-            <div className=" flex justify-center items-center  ">
+        <div className="relative w-full md:h-[400px] ">
+            <div className=" md:flex justify-center items-center  ">
 
 
                 <DashNav />
-                <div className="w-3/4 ">
+                <div className="w-full md:w-3/4 ">
                     <Outlet></Outlet>
 
                 </div>
