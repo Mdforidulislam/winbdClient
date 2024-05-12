@@ -137,7 +137,7 @@ const DashNav = () => {
                     <NavLink to={'/dashboard/allUser'} onClick={scrollToTop}>
                         <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
                             <TbTransferIn className="text-2xl" />
-                            <h1 className="">All-Users</h1>
+                            <h1 className="">All-Usersds</h1>
                         </div>
                     </NavLink>
                 </li>
