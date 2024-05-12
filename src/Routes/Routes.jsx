@@ -6,13 +6,14 @@ import MainLayOut from "../MainLayOut/MainLayOut";
 import LogIn from "../Pages/Log-In/LogIn";
 import Register from "../Pages/Register/Register";
 import AdminDashboard from './../DashBoard/AdminDashBoard/AdminDashBoard';
-import AdminHome from './../Components/AdminDash/AdminHome/AdminHome';
 import SubadminHome from "../DashBoard/Sub-Admindashboard/SubadminHome";
 import Subnotifications from "../DashBoard/Sub-Admindashboard/Notification/Notifications";
 import TransitionReq from "../DashBoard/Sub-Admindashboard/Transation/TransitionReq";
 import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransation/AddTransition";
 import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
 import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
+import AdminHome from './../DashBoard/AdminDashBoard/AdminHome/AdminHome';
+import AddSubAdmin from "../DashBoard/AdminDashBoard/AddSubAmin/AddSubAdmin";
 
 
 export const router = createBrowserRouter([
@@ -31,34 +32,38 @@ export const router = createBrowserRouter([
         ]
     },
 
-// dashboard below 
+    // dashboard below 
 
     {
         path: "/dashboard",
-        element: <AdminDashboard />,  
+        element: <AdminDashboard />,
         children: [
-        
-         // main admin dashboard router================================
+
+            // main admin dashboard router================================
             {
                 path: "/dashboard/admin",
                 element: <AdminHome />,
             },
-//    --------------------- Subadmin dashboard  routes    ------------------------
             {
-                path:'/dashboard/subAdmin',
-                element:<SubadminHome/>
+                path: "/dashboard/addSubAdmin",
+                element: <AddSubAdmin />,
+            },
+            //    --------------------- Subadmin dashboard  routes    ------------------------
+            {
+                path: '/dashboard/subAdmin',
+                element: <SubadminHome />
             },
             {
                 path: "/dashboard/notification",
-                element:<Subnotifications/>
+                element: <Subnotifications />
             },
             {
                 path: "/dashboard/transtionReq",
-                element:<TransitionReq/>
+                element: <TransitionReq />
             },
             {
-                path:'/dashboard/addtranstion',
-                element:<AddTransition/>
+                path: '/dashboard/addtranstion',
+                element: <AddTransition />
             }
             // -------------------------------- all the end sub admin router =======================
         ]
@@ -70,9 +75,9 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/profile/user',
-                element: <UserHome/>
-           }
-       ]
+                element: <UserHome />
+            }
+        ]
     }
 ]);
 
