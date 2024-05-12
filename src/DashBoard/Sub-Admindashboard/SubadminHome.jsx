@@ -4,6 +4,7 @@ import SubadminPiechart from "../../Components/Shared/GlobalPichart";
 import UsertableList from "../../Components/Shared/GlobalTable";
 
 
+
 const SubadminHome = () => {
     return (
         <div className="px-5 max-w-screen-xl mx-auto">
@@ -14,10 +15,7 @@ const SubadminHome = () => {
                     <p className="px-5 text-white font-semibold">Welcome back</p>
                 </div>
                 <div className="flex justify-end px-5 gap-4">
-                    <div className="flex justify-end items-center">
-                        <input type="text" placeholder="Search a Transtion" name="" id="" className="bg-[#1C2340] text-white px-3 hover:border-2   w-[500px] h-4 py-5 rounded-md " />
-
-                    </div>
+                    
                     <div className="relative group">
                         <img className="size-[40px] bg-slate-500 object-cover rounded-full" src="https://source.unsplash.com/300x300/?profile" alt="avatar navigate ui" />
                         <span className="size-2 bg-green-500 absolute rounded-full bottom-2 right-0 border-[3px] border-white"></span>
@@ -29,12 +27,15 @@ const SubadminHome = () => {
           <SubadminCard/>
      
               
-               <div className="flex gap-10 mt-5 mb-10">
+               <div className="flex gap-4 mt-5 mb-10">
                 <SubadminChart />
              
                 <SubadminPiechart />
                </div>
             <UsertableList />
+          
+
+     
          
         </div>
     );

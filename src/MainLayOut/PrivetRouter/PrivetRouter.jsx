@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const PrivetRouter = ({ children }) => {
 
     const rediection = useNavigate()
-    const usersRole = 'subAdmin';
+    const usersRole = '';
     useEffect(() => {
     
         if (!usersRole) {

@@ -7,16 +7,19 @@ import "./DashBoardCard.css"
 
 const DashboardCard = ({ CurrentStatus, Icon, total, Style, IconBg }) => {
     return (
-        <div className={`space-y-5 flex roll-in-left bg-[#1C2340] shadow-lg justify-around gap-2 text-white/60  rounded-xl mt-10 py-10 px-4  ${Style} `}>
-            <div className="w-1/2 text-3xl  p-4 font-semibold">
-                <div className={` rounded-full p-3  ${IconBg}`}>
-                    <p className="pl-4">{Icon}</p>
+        <div className={`px-1 max-w-screen-xl mx-auto  ${Style} `}>
+            <div className="bg-[#1C2340] h-[150px]  px-10 py-5 rounded-lg shadow-sm shadow-[#4e587f]">
+
+                <div className="flex justify-center items-center gap-4">
+                    <div className={`py-7 ${IconBg} rounded-full px-5 `} >
+                        <p className="text-4xl pl-1  rounded-full w-10 h-10  text-green-700">{Icon}</p>
+                    </div>
+                    <div className="py-8 ">
+                        <p className="text-2xl font-bold text-white">{total}</p>
+                        <p className="text-gray-400 text-sm">{CurrentStatus}</p>
+
+                    </div>
                 </div>
-                {/* <FaUserTie className=" " /> */}
-            </div>
-            <div className="w-1/2  text-white space-y-2 text-center">
-                <p className="text-2xl font-bold ">{total}</p>
-                <p className="text-sm font-semibold ">{CurrentStatus} </p>
             </div>
 
         </div >

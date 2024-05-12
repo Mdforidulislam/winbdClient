@@ -4,7 +4,7 @@ import NotificationHandle from "./NotificationHandle";
 const Subnotifications = () => {
     const [openModal, setOpenModal] = useState(false);
     return (
-        <div className="-mt-[100px]">
+        <div className="my-12">
 
             <div className="flex justify-end items-end px-12">
                 <button onClick={() => setOpenModal(true)} className="rounded-md bg-[#26325e] border-l border-r animate-pulse px-5 py-[6px] text-white">
