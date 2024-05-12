@@ -1,10 +1,7 @@
-import { useState } from "react";
-import { FaDeleteLeft, FaSackDollar } from "react-icons/fa6";
-import { HiMiniArrowPathRoundedSquare } from "react-icons/hi2";
-import { TbSquareRoundedCheckFilled } from "react-icons/tb";
 
 
-const UsertableList = () => {
+
+const GlobalTable = () => {
     // const [users,setUser] =useState(false)
     // const toggleIcon = () => {
     //     setUser(prevState => !prevState);
@@ -68,4 +65,4 @@ const UsertableList = () => {
     );
 };
 
-export default UsertableList;
+export default GlobalTable;

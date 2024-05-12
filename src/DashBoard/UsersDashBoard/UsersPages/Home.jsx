@@ -1,7 +1,7 @@
 const UserHome = () => {
     return (
         <div>
-            <h1>i'm users </h1>
+            <h1>im users </h1>
         </div>
     )
 }
