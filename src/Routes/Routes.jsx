@@ -7,16 +7,12 @@ import LogIn from "../Pages/Log-In/LogIn";
 import Register from "../Pages/Register/Register";
 import AdminDashboard from './../DashBoard/AdminDashBoard/AdminDashBoard';
 import AdminHome from './../Components/AdminDash/AdminHome/AdminHome';
-import ListofSubadmin from "../DashBoard/Sub-Admindashboard/ListofSubadmin";
-import AllUser from "../DashBoard/Sub-Admindashboard/AllUser";
 import SubadminHome from "../DashBoard/Sub-Admindashboard/SubadminHome";
-import Subnotifications from "../DashBoard/Sub-Admindashboard/Subnotifications";
-import TransitionReq from "../DashBoard/Sub-Admindashboard/TransitionReq";
-import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransition";
-import Usermanagment from "../DashBoard/Sub-Admindashboard/Usermanagment";
+import Subnotifications from "../DashBoard/Sub-Admindashboard/Notification/Notifications";
+import TransitionReq from "../DashBoard/Sub-Admindashboard/Transation/TransitionReq";
+import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransation/AddTransition";
 import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
 import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
-
 
 
 export const router = createBrowserRouter([
@@ -53,10 +49,6 @@ export const router = createBrowserRouter([
                 element:<SubadminHome/>
             },
             {
-                path: "/dashboard/AllsubAdmin",
-                element:<ListofSubadmin/>
-            },
-            {
                 path: "/dashboard/notification",
                 element:<Subnotifications/>
             },
@@ -67,11 +59,8 @@ export const router = createBrowserRouter([
             {
                 path:'/dashboard/addtranstion',
                 element:<AddTransition/>
-            },
-            {
-                path:'/dashboard/userManagment',
-                element:<Usermanagment/>
             }
+            // -------------------------------- all the end sub admin router =======================
         ]
     },
 

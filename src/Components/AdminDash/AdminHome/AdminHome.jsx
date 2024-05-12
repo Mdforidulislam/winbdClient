@@ -4,7 +4,6 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaUserTie } from "react-icons/fa";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
-import GraphCart from "../../LineChart/LineChart";
 import GlobalChart from "../../Shared/GlobalChart";
 import GlobalPichart from "../../Shared/GlobalPichart";
 

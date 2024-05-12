@@ -1,7 +1,7 @@
 import SubadminCard from "../../Components/Shared/CardGobal";
 import SubadminChart from "../../Components/Shared/GlobalChart";
 import SubadminPiechart from "../../Components/Shared/GlobalPichart";
-import UsertableList from "./UsertableList";
+import UsertableList from "../../Components/Shared/GlobalTable";
 
 
 const SubadminHome = () => {
