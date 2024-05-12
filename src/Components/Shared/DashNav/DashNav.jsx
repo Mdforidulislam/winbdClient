@@ -32,14 +32,6 @@ const DashNav = () => {
             <hr className="mb-5 hidden md:flex w-1/2 mx-auto" />
 
 
-
-            <div className="flex justify-between items-center my-10">
-                <h1 className="font-medium hidden md:flex">Menu</h1>
-                <h1 className="font-medium hidden md:flex">Admin</h1>
-
-            </div>
-
-
             <ul className=" hidden md:flex flex-col menu space-y-3  mb-28 ">
 
 
@@ -94,17 +86,6 @@ const DashNav = () => {
 
 
             </ul>
-            <li className=" ">
-
-
-                <NavLink to={'/'} onClick={scrollToTop}>
-                    <div className=" gap-2 text-center font-bold   ">
-                        <hr className="my-4 w-1/2 mx-auto" />
-                        <h1 className="hover:bg-blue-700/40 py-2 rounded-3xl  px-3">Home</h1>
-                    </div>
-                </NavLink>
-            </li>
-
             {/* mobile resposive */}
             <ul
                 className={`bg-[#1C2340]  backdrop-blur-3xl md:hidden absolute w-full h-screen top-[72px] py-4 px-5 duration-500 ${open ? "left-0" : "-left-full"

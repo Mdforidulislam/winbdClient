@@ -11,13 +11,16 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import Button from "../../Components/Button/Button";
 import { Link } from "react-router-dom";
+import PrivetRouter from "../../MainLayOut/PrivetRouter/PrivetRouter";
 
 const LogIn = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
-    const onSubmit = data => {
+   const onSubmit = data => {
         console.log(data)
 
+        // here call the hookes 
+        PrivetRouter('user') 
     };
     return (
         <div className="kenburns-top">

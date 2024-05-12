@@ -1,14 +1,20 @@
-import {Outlet } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 
-const MainLayOut = () => {
+const MainLayout = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        // Redirect to login page
+        navigate('/login');
+    }, [navigate]);
+
     return (
-        <div>            
-            <h1>i'm foridul</h1>
-            
+        <div>  
+            <Outlet/>
+            {/* Render your layout content here */}
         </div>
     );
 };
 
-export default MainLayOut;
-
-
+export default MainLayout;

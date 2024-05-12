@@ -1,4 +1,3 @@
-
 import {
     createBrowserRouter,
 } from "react-router-dom";
@@ -13,6 +12,7 @@ import TransitionReq from "../DashBoard/Sub-Admindashboard/Transation/Transition
 import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransation/AddTransition";
 import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
 import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
+import PrivetRouter from "../MainLayOut/PrivetRouter/PrivetRouter";
 
 
 export const router = createBrowserRouter([
@@ -35,30 +35,30 @@ export const router = createBrowserRouter([
 
     {
         path: "/dashboard",
-        element: <AdminDashboard />,  
+        element: <PrivetRouter><AdminDashboard /></PrivetRouter>,  
         children: [
         
          // main admin dashboard router================================
             {
                 path: "/dashboard/admin",
-                element: <AdminHome />,
+                element: <PrivetRouter><AdminHome /></PrivetRouter>,
             },
 //    --------------------- Subadmin dashboard  routes    ------------------------
             {
                 path:'/dashboard/subAdmin',
-                element:<SubadminHome/>
+                element:<PrivetRouter><SubadminHome/></PrivetRouter>,
             },
             {
                 path: "/dashboard/notification",
-                element:<Subnotifications/>
+                element:<PrivetRouter><Subnotifications/></PrivetRouter>
             },
             {
                 path: "/dashboard/transtionReq",
-                element:<TransitionReq/>
+                element:<PrivetRouter><TransitionReq/></PrivetRouter>
             },
             {
                 path:'/dashboard/addtranstion',
-                element:<AddTransition/>
+                element:<PrivetRouter><AddTransition/></PrivetRouter>
             }
             // -------------------------------- all the end sub admin router =======================
         ]
@@ -70,7 +70,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/profile/user',
-                element: <UserHome/>
+                element: <PrivetRouter><UserHome/></PrivetRouter>
            }
        ]
     }
