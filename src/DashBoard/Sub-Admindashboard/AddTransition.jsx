@@ -1,11 +1,11 @@
-import { useState } from "react";
+
 import AddtransitionCard from "./AddtransitionCard";
 
 
 const AddTransition = () => {
 
     return (
-        <div className="max-w-screen-xl mx-auto -mt-[500px]">
+        <div className="max-w-screen-xl mx-auto mt-6">
          <div className="flex justify-center items-center gap-5">
                 <div>
                     <input type="text" name="" id="" placeholder="Enter your Name" className="px-4 text-white  w-[250px] py-3 rounded-md bg-[#222947]" />
