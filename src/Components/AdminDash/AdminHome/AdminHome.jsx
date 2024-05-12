@@ -1,51 +1,66 @@
-import Charts from "../../Charts/Charts";
 import DashboardCard from "../../DashboardCard/DashboardCard";
+import { MdNotificationsActive } from "react-icons/md";
+import { FaUserCircle } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { MyResponsiveLine } from "../../LineChart/LineChart";
+
 
 const AdminHome = () => {
     return (
-        <div className="w-full h-full">
-            <div className="flex justify-between items-center px-10">
+        <div className="w-full h-full px-8">
+            <div className=" flex justify-between items-center px-4 text-white">
                 <div>
                     <h1 className="text-xl font-bold pb-4">Hello, Admin</h1>
-                    <data className="text-slate-500 text-base font-medium ">16 March  2024</data>
+                    <data className=" text-base font-medium ">Welcome Back !</data>
                 </div>
-                <div className="space-x-4">
-                    <input className="border-2 border-slate-700 text-xl font-semibold py-2 rounded-full text-center" type="text " placeholder="Search" />
-                    <button className="btn border-2 px-4 py-2 rounded-2xl text-xl font-semibold border-stone-700 text-white bg-teal-600 hover:text-teal-600 hover:bg-white ">+ Add New Sub Admin </button>
+                <div>
+                    <input className="border-2  hidden md:flex w-[400px] border-slate-700 text-xl font-semibold py-2 rounded-full text-center" type="text " placeholder="Search" />
+                </div>
+                <div className="space-x-4 flex justify-center items-center  gap-5">
+                    <MdNotificationsActive className="text-3xl " />
+                    <FaUserCircle className="text-5xl md:text-7xl" />
+
 
                 </div>
             </div>
-            <div className=" grid grid-cols-4 gap-5">
+            <div className=" md:grid  md:grid-cols-4 gap-5 px-4">
                 <DashboardCard
-                    sectionName={"Sub Admin"}
                     total={9}
-                    recentTotal={6}
+                    CurrentStatus={"Admin"}
+                    Icon={<FaUserTie />}
+                    IconBg={"bg-[#182754]"}
                 />
                 <DashboardCard
-                    sectionName={"Total User"}
                     total={156}
-                    recentTotal={90}
-                    Style={"bg-teal-600/80"}
+                    Icon={<FaUserTie />}
+                    CurrentStatus={" Sub Admin"}
+                    IconBg={"bg-orange-600/40"}
+
+
                 />
                 <DashboardCard
-                    sectionName={"Total Income "}
                     total={"789$"}
-                    recentTotal={"580$"}
-                    Style={"bg-slate-600/80"}
+                    Icon={<FaMoneyBillWave />}
+                    CurrentStatus={" Balance"}
+                    IconBg={"bg-teal-600/40"}
+
+
 
                 />
                 <DashboardCard
-                    sectionName={"Total Withdraw"}
                     total={"450$"}
-                    recentTotal={"230$"}
-                    Style={"bg-orange-600/80"}
+                    Icon={<GiTakeMyMoney />}
+                    CurrentStatus={"Withdraw"}
+                    IconBg={"bg-slate-600/40"}
+
+
 
                 />
 
             </div>
-            <div>
-                <Charts />
-            </div>
+            <MyResponsiveLine className="w-full h-[400px]" />
 
         </div>
     );

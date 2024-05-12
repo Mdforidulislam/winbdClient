@@ -1,15 +1,40 @@
+import SubadminCard from "./SubadminCard";
+import SubadminChart from "./SubadminChart";
+import SubadminPiechart from "./SubadminPiechart";
+import UsertableList from "./UsertableList";
 
 
 const SubadminHome = () => {
     return (
-        <div className="-mt-[350px]">
-            <h1 className="text-4xl uppercase font-bold text-center">Sub Admin Home</h1>
-            <div className="flex justify-center">
-                <hr className="border-2 border-gray-300 w-[320px] mt-2" />
-            </div>
-            <div>
+        <div className="px-5 max-w-screen-xl mx-auto">
+          <div className="flex justify-between items-center">
+                <div>
 
-            </div>
+                    <h1 className=" px-5 text-white font-bold text-2xl">Hellow Sub-Admin</h1>
+                    <p className="px-5 text-white font-semibold">Welcome back</p>
+                </div>
+                <div className="flex justify-end px-5 gap-4">
+                    <div className="flex justify-end items-center">
+                        <input type="text" placeholder="Search a Transtion" name="" id="" className="bg-[#1C2340] text-white px-3 hover:border-2   w-[500px] h-4 py-5 rounded-md " />
+
+                    </div>
+                    <div className="relative group">
+                        <img className="size-[40px] bg-slate-500 object-cover rounded-full" src="https://source.unsplash.com/300x300/?profile" alt="avatar navigate ui" />
+                        <span className="size-2 bg-green-500 absolute rounded-full bottom-2 right-0 border-[3px] border-white"></span>
+                        <span className="size-2 bg-green-500 absolute rounded-full bottom-2 right-0 animate-ping"></span>
+                    </div>
+                </div>
+
+          </div>
+          <SubadminCard/>
+     
+              
+               <div className="flex gap-10 mt-5 mb-10">
+                <SubadminChart />
+             
+                <SubadminPiechart />
+               </div>
+            <UsertableList />
          
         </div>
     );
