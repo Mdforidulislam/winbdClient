@@ -14,6 +14,8 @@ import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
 import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
 import AdminHome from './../DashBoard/AdminDashBoard/AdminHome/AdminHome';
 import AddSubAdmin from "../DashBoard/AdminDashBoard/AddSubAmin/AddSubAdmin";
+import AddtransitionCard from "../DashBoard/Sub-Admindashboard/AddTransation/AddtransitionCard";
+import AllUsers from "../DashBoard/Sub-Admindashboard/UsersManagment/AllUsers";
 
 
 export const router = createBrowserRouter([
@@ -59,11 +61,19 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/transtionReq",
-                element: <TransitionReq />
+                element:<TransitionReq/>
             },
             {
-                path: '/dashboard/addtranstion',
-                element: <AddTransition />
+                path: "/dashboard/addNumber",
+                element:<AddtransitionCard/>
+            },
+            {
+                path:'/dashboard/addtranstion',
+                element:<AddTransition/>
+            },
+            {
+                path:'/dashboard/allUsers',
+                element:<AllUsers/>
             }
             // -------------------------------- all the end sub admin router =======================
         ]

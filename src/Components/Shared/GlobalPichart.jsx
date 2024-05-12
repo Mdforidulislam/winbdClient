@@ -40,9 +40,9 @@ const GlobalPichart = () => {
         <div>
             <div>
                 
-                <div className="bg-[#1C2340] shadow-gray-700 shadow-sm w-[350px] h-[460px] items-center rounded-lg mt-4" id="chart">
-                    <h1 className="text-white font-semibold text-xl px-2">Statistics</h1>
-                    <ReactApexChart options={subPie.options} series={subPie.series} type="pie" height={360} />
+                <div className="bg-[#1C2340] shadow-gray-700 shadow-sm w-[380px] h-[460px] items-center rounded-lg mt-4" id="chart">
+                    <h1 className="text-white font-semibold text-xl py-4 px-2">Statistics</h1>
+                    <ReactApexChart className="mt-16" options={subPie.options} series={subPie.series} type="pie" height={360} />
                 <div className="flex justify-around gap-5">
                     <p className="text-white font-semibold">$ 645.34</p>
                     <p className="text-white font-semibold">$ 335.34</p>

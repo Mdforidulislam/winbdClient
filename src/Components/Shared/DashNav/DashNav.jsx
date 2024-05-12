@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { MdOutlineDashboardCustomize, MdOutlineNotificationsActive } from "react-icons/md";
 import scrollToTop from "./ScrollToTop";
 import MenuClose from "../../SvgIcons/MenuClose";
 import MenuOpen from "../../SvgIcons/MenuOpen";
 import { useState } from "react";
+import { TbTransferIn } from "react-icons/tb";
 
 const DashNav = () => {
     const [open, setOpen] = useState(false);
@@ -67,20 +68,63 @@ const DashNav = () => {
                         </div>
                     </NavLink>
                 </li>
+{/* 
+   ----------------------  subadmin dashbaord navbar data here ---------------------- */}
+
+                <li className=" ">
+                    <NavLink to={'/dashboard/subAdmin'} onClick={scrollToTop}>
+                        <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
+                            <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
+                            <h1> SubAdmin-Dashboard </h1>
+                        </div>
+                    </NavLink>
+                </li>
+
+                
+                <li className=" ">
+                    <NavLink to={'/dashboard/notification'} onClick={scrollToTop}>
+                        <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
+                            <MdOutlineNotificationsActive className="text-2xl"/>
+                            <h1 className="">Notifications</h1>
+                        </div>
+                    </NavLink>
+                </li>
+
+
+                <li className=" ">
+                    <NavLink to={'/dashboard/addNumber'} onClick={scrollToTop}>
+                        <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
+                            <MdOutlineNotificationsActive className="text-2xl" />
+                            <h1 className="">Add-Number</h1>
+                        </div>
+                    </NavLink>
+                </li>
+
+                <li className=" ">
+                    <NavLink to={'/dashboard/transitionReq'} onClick={scrollToTop}>
+                        <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
+                            <TbTransferIn className="text-2xl" />
+                            <h1 className="">Transition Request</h1>
+                        </div>
+                    </NavLink>
+                </li>
+
+                <li className=" ">
+                    <NavLink to={'/dashboard/allUsers'} onClick={scrollToTop}>
+                        <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
+                            <TbTransferIn className="text-2xl" />
+                            <h1 className="">All-Users</h1>
+                        </div>
+                    </NavLink>
+                </li>
+
 
 
 
             </ul>
-            <li className=" ">
+         
 
-
-                <NavLink to={'/'} onClick={scrollToTop}>
-                    <div className=" gap-2 text-center font-bold   ">
-                        <hr className="my-4 w-1/2 mx-auto" />
-                        <h1 className="hover:bg-blue-700/40 py-2 rounded-3xl  px-3">Home</h1>
-                    </div>
-                </NavLink>
-            </li>
+        {/* ----------------------  subadmin dashbaord navbar data end here ---------------------- */}
 
             {/* mobile resposive */}
             <ul
