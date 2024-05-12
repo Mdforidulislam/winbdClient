@@ -1,6 +1,6 @@
-import SubadminCard from "./SubadminCard";
-import SubadminChart from "./SubadminChart";
-import SubadminPiechart from "./SubadminPiechart";
+import SubadminCard from "../../Components/Shared/CardGobal";
+import SubadminChart from "../../Components/Shared/GlobalChart";
+import SubadminPiechart from "../../Components/Shared/GlobalPichart";
 import UsertableList from "./UsertableList";
 
 

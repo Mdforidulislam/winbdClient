@@ -283,7 +283,7 @@ const data = [
 ]
 
 
-export const MyResponsiveLine = ({ data }) => (
+const GraphCart = ({ data }) => (
 
     <ResponsiveLine
         data={data}
@@ -353,3 +353,7 @@ export const MyResponsiveLine = ({ data }) => (
         ]}
     />
 )
+
+
+
+export default GraphCart

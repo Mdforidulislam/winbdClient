@@ -1,7 +1,7 @@
 import  { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-const SubadminChart = () => {
+const GlobalChart = () => {
     const [charts, setCharts] = useState(null)
 
 
@@ -32,4 +32,4 @@ const SubadminChart = () => {
     );
 };
 
-export default SubadminChart;
+export default GlobalChart;

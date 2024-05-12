@@ -7,8 +7,8 @@ import "./DashBoardCard.css"
 
 const DashboardCard = ({ CurrentStatus, Icon, total, Style, IconBg }) => {
     return (
-        <div className={`space-y-5 shadow flex roll-in-left bg-[#1C2340]  justify-around   gap-2   text-white/60 border-teal-600 rounded-3xl mt-10 py-4 px-4  ${Style} `}>
-            <div className="w-1/2   text-3xl  p-4 font-semibold">
+        <div className={`space-y-5 flex roll-in-left bg-[#1C2340] shadow-lg justify-around gap-2 text-white/60  rounded-xl mt-10 py-10 px-4  ${Style} `}>
+            <div className="w-1/2 text-3xl  p-4 font-semibold">
                 <div className={` rounded-full p-3  ${IconBg}`}>
                     <p className="pl-4">{Icon}</p>
                 </div>

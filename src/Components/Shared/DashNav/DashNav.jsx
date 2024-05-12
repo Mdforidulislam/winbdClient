@@ -9,7 +9,7 @@ const DashNav = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="w-full md:w-[350px]  md:min-h-screen p-5 bg-[#1C2340] text-white   ">
+        <div className="w-full md:w-[350px] lg:h-screen p-5 bg-[#1C2340] text-white   ">
             <div className="z-50 py-5 w-full md:w-auto flex justify-between text-center">
                 <NavLink
                     className="flex gap-2.5 items-center "

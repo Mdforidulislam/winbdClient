@@ -14,6 +14,8 @@ import Subnotifications from "../DashBoard/Sub-Admindashboard/Subnotifications";
 import TransitionReq from "../DashBoard/Sub-Admindashboard/TransitionReq";
 import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransition";
 import Usermanagment from "../DashBoard/Sub-Admindashboard/Usermanagment";
+import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
+import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
 
 
 
@@ -33,41 +35,55 @@ export const router = createBrowserRouter([
         ]
     },
 
+// dashboard below 
+
     {
-        path: "/adminDashboard",
-        element: <AdminDashboard />,
+        path: "/dashboard",
+        element: <AdminDashboard />,  
         children: [
+        
+         // main admin dashboard router================================
             {
-                path: "/adminDashboard/MyDashboard",
+                path: "/dashboard/admin",
                 element: <AdminHome />,
             },
 //    --------------------- Subadmin dashboard  routes    ------------------------
             {
-                path:'/adminDashboard/subadminHome',
+                path:'/dashboard/subAdmin',
                 element:<SubadminHome/>
             },
             {
-                path: "/adminDashboard/AllsubAdmin",
+                path: "/dashboard/AllsubAdmin",
                 element:<ListofSubadmin/>
             },
             {
-                path: "/adminDashboard/subadminNotifiaction",
+                path: "/dashboard/notification",
                 element:<Subnotifications/>
             },
             {
-                path: "/adminDashboard/transtionReq",
+                path: "/dashboard/transtionReq",
                 element:<TransitionReq/>
             },
             {
-                path:'/adminDashboard/addtranstion',
+                path:'/dashboard/addtranstion',
                 element:<AddTransition/>
             },
             {
-                path:'/adminDashboard/userManagment',
+                path:'/dashboard/userManagment',
                 element:<Usermanagment/>
             }
-           
         ]
+    },
+
+    {
+        path: '/profile',
+        element: <UsersOutLet />,
+        children: [
+            {
+                path: '/profile/user',
+                element: <UserHome/>
+           }
+       ]
     }
 ]);
 

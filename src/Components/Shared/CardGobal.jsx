@@ -3,7 +3,7 @@ import { FaDollarSign } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
 
 
-const SubadminCard = () => {
+const CardGobal = () => {
     return (
         <div className="mt-5">
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 px-1 max-w-screen-xl mx-auto">
@@ -71,4 +71,4 @@ const SubadminCard = () => {
     );
 };
 
-export default SubadminCard;
+export default CardGobal;

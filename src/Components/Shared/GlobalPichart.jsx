@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const SubadminPiechart = () => {
+const GlobalPichart = () => {
     const [subPie, setSubpie] = useState({
         series: [44, 55, 67, 83],
         options: {
@@ -39,9 +39,9 @@ const SubadminPiechart = () => {
         <div>
             <div>
                 
-                <div className="bg-[#1C2340] shadow-gray-700 shadow-sm w-[350px] h-[450px] rounded-lg" id="chart">
+                <div className="bg-[#1C2340] shadow-gray-700 shadow-sm w-[350px] h-[460px] items-center rounded-lg mt-4" id="chart">
                     <h1 className="text-white font-semibold text-xl px-2">Statistics</h1>
-                    <ReactApexChart options={subPie.options} series={subPie.series} type="radialBar" height={350} />
+                    <ReactApexChart options={subPie.options} series={subPie.series} type="pie" height={360} />
                 <div className="flex justify-around gap-5">
                     <p className="text-white font-semibold">$ 645.34</p>
                     <p className="text-white font-semibold">$ 335.34</p>
@@ -54,4 +54,4 @@ const SubadminPiechart = () => {
     );
 };
 
-export default SubadminPiechart;
+export default GlobalPichart;
