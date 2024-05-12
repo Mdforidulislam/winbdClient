@@ -53,34 +53,10 @@ const DashNav = () => {
                     </NavLink>
                 </li>
                 <li className=" ">
-                    <NavLink to={''} onClick={scrollToTop}>
+                    <NavLink to={'/dashboard/addSubAdmin'} onClick={scrollToTop}>
                         <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
                             <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                            <h1> Invoice </h1>
-                        </div>
-                    </NavLink>
-                </li>
-                <li className=" ">
-                    <NavLink to={''} onClick={scrollToTop}>
-                        <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
-                            <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                            <h1> Message </h1>
-                        </div>
-                    </NavLink>
-                </li>
-                <li className=" ">
-                    <NavLink to={''} onClick={scrollToTop}>
-                        <div className="flex gap-2  font-medium  hover:bg-blue-700/40 py-2  px-3 rounded-3xl">
-                            <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                            <h1> Activity </h1>
-                        </div>
-                    </NavLink>
-                </li>
-                <li className=" ">
-                    <NavLink to={''} onClick={scrollToTop}>
-                        <div className="flex items-center gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
-                            <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                            <h1> Notifications </h1>
+                            <h1> Add Sub-Admin </h1>
                         </div>
                     </NavLink>
                 </li>
@@ -88,7 +64,7 @@ const DashNav = () => {
                     <NavLink to={''} onClick={scrollToTop}>
                         <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
                             <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                            <h1> Analytics </h1>
+                            <h1> All Sub-Admin </h1>
                         </div>
                     </NavLink>
                 </li>
@@ -134,13 +110,14 @@ const DashNav = () => {
                 </li>
 
                 <li className=" ">
-                    <NavLink to={'/dashboard/allUser'} onClick={scrollToTop}>
+                    <NavLink to={'/dashboard/allUsers'} onClick={scrollToTop}>
                         <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
                             <TbTransferIn className="text-2xl" />
-                            <h1 className="">All-Usersds</h1>
+                            <h1 className="">All-Users</h1>
                         </div>
                     </NavLink>
                 </li>
+
 
 
 
