@@ -1,18 +1,19 @@
+import { FcSearch } from "react-icons/fc";
 
 
 
 const GlobalTable = () => {
-    // const [users,setUser] =useState(false)
-    // const toggleIcon = () => {
-    //     setUser(prevState => !prevState);
-    // };
+   
     return (
         <div className="">
 
+         
+
             <div className="overflow-x-auto ">
+
                 <table className="min-w-full  bg-[#1C2340]  mx-auto shadow-sm shadow-gray-500 rounded-md border-gray-100 my-6">
                     <thead>
-                        <tr className="bg-[#1C2340]  text-white">
+                        <tr className="bg-[#272e4b]  text-white">
                             <th className="py-4 px-6 text-lg text-left boeder-1 border-b border-gray-400">Image</th>
                             <th className="py-4 px-6 text-lg text-left boeder-1 border-b border-gray-400">Name</th>
                             <th className="py-4 px-6 text-lg text-left boeder-1 border-b border-gray-400">UserId</th>
@@ -58,6 +59,7 @@ const GlobalTable = () => {
                         </tr>
                     </tbody>
                 </table>
+                
             </div>
 
 

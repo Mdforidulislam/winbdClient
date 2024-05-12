@@ -13,6 +13,7 @@ import TransitionReq from "../DashBoard/Sub-Admindashboard/Transation/Transition
 import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransation/AddTransition";
 import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
 import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
+import AllUsers from "../DashBoard/Sub-Admindashboard/UsersManagment/AllUsers";
 
 
 export const router = createBrowserRouter([
@@ -53,11 +54,15 @@ export const router = createBrowserRouter([
                 element:<Subnotifications/>
             },
             {
-                path: "/dashboard/transtionReq",
+                path: "/dashboard/transitionReq",
                 element:<TransitionReq/>
             },
             {
-                path:'/dashboard/addtranstion',
+                path: "/dashboard/allUser",
+                element:<AllUsers/>
+            },
+            {
+                path:'/dashboard/addNumber',
                 element:<AddTransition/>
             }
             // -------------------------------- all the end sub admin router =======================
