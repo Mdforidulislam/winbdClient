@@ -1,40 +1,35 @@
 [
     {
-        "img":"../src/assets/img/bkash.png",
+        "img":"https://www.logo.wine/a/logo/BKash/BKash-Icon2-Logo.wine.svg",
         "title":"bkash",
         "descrip":"try to make easy",
         "id":1
     },
     {
-        "img":"../src/assets/img/roket.png",
+        "img":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ec/7d/b6/ec7db672-d93d-0827-d49f-1e18b93ed623/AppIcon-1x_U007emarketing-0-7-0-sRGB-85-220-0.png/1200x630wa.png",
         "title":"rocket",
         "offer":"+15%",
         "descrip":"its ok or not",
         "id":2
     },
     {
-        "img":"../src/assets/img/nagad.png",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREF090FK9Ks_Z2IlfIJwGl-ulTAmR9om-QGA&usqp=CAU",
         "title":"nagad",
         "descrip":"may be work",
         "id":3
     },
     {
-        "img":"../src/assets/img/opai.png",
+        "img":"https://play-lh.googleusercontent.com/7e6QoXWKpldVxOB6s1XTOLH6BWsT5TS8kfGOoPnS65bnViF4EbD35mrVh5PgP8xf7Q=w240-h480-rw",
         "title":"upay",
         "offer":"+15%"
     },
     {
-        "img":"../src/assets/img/okmate.png",
+        "img":"https://pngtom.com/files/preview/960x960/31702136575vvv2qhmvmjhe6rhlfaierhhkzfdmyhtetbrhscle39ly0dvud2e0i8yltmq4kiyzyak0k0kexkohvuxag6puifhivx1ytkwy3cbj.png",
         "title":"OkWalet",
         "offer":"+15%"
     },
     {
-        "img":"../src/assets/img/bitcon.png",
-        "title":"BTC",
-        "offer":"+15%"
-    },
-    {
-        "img":"../src/assets/img/local_bank.png",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt7GA0ktSZ2DHYIrsVgro7iUrxxyCXoJrhrHBQuGlJgcbQZP-HkIlHYRpC6Rg2nZ5tDvU&usqp=CAU",
         "title":"local bank",
         "offer":"+15%"
     }
