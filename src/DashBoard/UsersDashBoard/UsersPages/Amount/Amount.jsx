@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Modal } from "../../../../Components/Shared/Modal/Modal";
+import { Modal } from "../Modal/Modal";
+
 
 const Amount = ({number}) => {
 
@@ -51,7 +52,7 @@ const Amount = ({number}) => {
 
             {/* modal here */}
             <div className="mt-3">
-                <Modal nextStep='Next Step'/>
+                <Modal nextStep='Next Step' transactionNumber={'9234234234'} transactionTitle={'deposite'} amount={'523'} userNumber={'02342342343'} />
             </div>
 
         </div>

@@ -5,9 +5,9 @@ import PaymentMethod from "../PaymentMethod/PaymentMethod";
 const Desposite = () => {
     return (
         <div>
-            <PaymentMethod />
-            <DepositeChennel />
-            <Amount />
+            <div className="mt-3"><PaymentMethod /></div>
+            <div className="mt-3"><DepositeChennel /></div>
+            <div className="mt-3"> <Amount /></div>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { Modal } from "../../../../Components/Shared/Modal/Modal";
+import { Modal } from "../Modal/Modal";
+
 
 const Nav = () => {
   return (

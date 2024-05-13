@@ -41,7 +41,7 @@ const Tabs = () => {
                </div>
 
             {/* Tab content */}
-            <div className="  mt-4 rounded">
+            <div className="  rounded">
                 {activeTab === 'withdraw' && (
                     <div className="tab-pane space-y-3">
                         <WithDraw/>
