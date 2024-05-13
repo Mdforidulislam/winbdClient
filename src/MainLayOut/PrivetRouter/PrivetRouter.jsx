@@ -1,27 +1,24 @@
 import { Navigate, useLocation } from "react-router-dom";
 
 
-const PrivetRouter = ({ children   }) => {
+const PrivetRouter = ({ children }) => {
 
     const userLocation = useLocation()
    
-    const usersRole = 'admin';
-
-
+    const usersRole = 'subAdmin';
 
     if (!usersRole) {
         return <div>loadin...</div>
     }
 
     console.log(children);
-    
 
 
- // =================================== start the router validation ==========================
-    if (usersRole === 'user' ) {
+    // =================================== start the router validation ==========================
+    if (usersRole === 'user') {
         if (userLocation.pathname === '/profile/user') {
             return children;
-        }else {
+        } else {
             return <Navigate to="/login" replace={true} />
         }
     } else if (usersRole === 'subAdmin') {
@@ -31,9 +28,9 @@ const PrivetRouter = ({ children   }) => {
             return children;
         } else if (userLocation.pathname === '/dashboard/transtionReq') {
             return children;
-        }else if(userLocation.pathname === '/dashboard/addNumber'){
+        } else if (userLocation.pathname === '/dashboard/addNumber') {
             return children;
-        }else if(userLocation.pathname === '/dashboard/addtranstion'){
+        } else if (userLocation.pathname === '/dashboard/addtranstion') {
             return children;
         } else if (userLocation.pathname === '/dashboard/allUsers') {
             return children;
@@ -41,15 +38,15 @@ const PrivetRouter = ({ children   }) => {
         else {
             return <Navigate to="/login" replace={true} />
         }
-        
-    } else if (usersRole === 'admin') { 
+
+    } else if (usersRole === 'admin') {
         if (userLocation.pathname === '/dashboard/admin') {
             return children;
-        }else {
+        } else {
             return <Navigate to="/login" replace={true} />
         }
-    } 
-     
+    }
+
 };
 
 export default PrivetRouter;
