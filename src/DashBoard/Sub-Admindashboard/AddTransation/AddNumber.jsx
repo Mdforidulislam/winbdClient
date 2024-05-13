@@ -1,8 +1,8 @@
 
-import AddtransitionCard from "./AddtransitionCard";
+import AddtransitionCard from "./AddNumberCard";
 
 
-const AddTransition = () => {
+const AddNumber = () => {
 
     return (
         <div className="max-w-screen-xl mx-auto mt-6">
@@ -35,4 +35,4 @@ const AddTransition = () => {
     );
 };
 
-export default AddTransition;
+export default AddNumber;

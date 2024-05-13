@@ -8,14 +8,13 @@ import AdminDashboard from './../DashBoard/AdminDashBoard/AdminDashBoard';
 import SubadminHome from "../DashBoard/Sub-Admindashboard/SubadminHome";
 import Subnotifications from "../DashBoard/Sub-Admindashboard/Notification/Notifications";
 import TransitionReq from "../DashBoard/Sub-Admindashboard/Transation/TransitionReq";
-import AddTransition from "../DashBoard/Sub-Admindashboard/AddTransation/AddTransition";
 import UsersOutLet from "../DashBoard/UsersDashBoard/Users";
 import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
 import PrivetRouter from "../MainLayOut/PrivetRouter/PrivetRouter";
 
-import AddtransitionCard from "../DashBoard/Sub-Admindashboard/AddTransation/AddtransitionCard";
 import AllUsers from "../DashBoard/Sub-Admindashboard/UsersManagment/AllUsers";
 import AdminHome from "../Components/AdminDash/AdminHome/AdminHome";
+import AddNumber from "../DashBoard/Sub-Admindashboard/AddTransation/AddNumber";
 
 
 export const router = createBrowserRouter([
@@ -49,7 +48,7 @@ export const router = createBrowserRouter([
             //    --------------------- Subadmin dashboard  routes    ------------------------
             {
                 path:'/dashboard/subAdmin',
-                element:<PrivetRouter><SubadminHome/></PrivetRouter>,
+                element:<PrivetRouter ><SubadminHome/></PrivetRouter>,
             },
             {
                 path: "/dashboard/notification",
@@ -58,15 +57,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/transtionReq",
-                element:<TransitionReq/>
+                element:<PrivetRouter><TransitionReq/></PrivetRouter>
             },
             {
-                path: "/dashboard/addNumber",
-                element:<AddtransitionCard/>
-            },
-            {
-                path:'/dashboard/addtranstion',
-                element:<PrivetRouter><AddTransition/></PrivetRouter>
+                path:'/dashboard/addNumber',
+                element:<PrivetRouter><AddNumber/></PrivetRouter>
             },
             {
                 path:'/dashboard/allUsers',

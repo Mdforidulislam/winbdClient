@@ -10,18 +10,44 @@ import { FaUserAlt } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import Button from "../../Components/Button/Button";
-import { Link } from "react-router-dom";
-import PrivetRouter from "../../MainLayOut/PrivetRouter/PrivetRouter";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 const LogIn = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
+    const rediection = useNavigate()
 
    const onSubmit = data => {
-        console.log(data)
+       console.log(data)
 
-        // here call the hookes 
-        PrivetRouter('user') 
+       // che the vaildation users 
+       
+       const usersRole = 'subAdmin';
+       console.log(usersRole,'check the user role');
+   
+           if (!usersRole) {
+               rediection('/login')
+           } else {
+               switch (usersRole) {
+                   case 'admin':
+                       rediection('/dashboard/admin');
+                       break;
+                   case 'subAdmin':
+                       rediection('/dashboard/subAdmin');
+                       break;
+                   case 'user':
+                       rediection('/profile/user');
+                       break;
+                   default:
+                       rediection('/login')
+                       break;
+               }
+           }
     };
+
+    
+
     return (
         <div className="kenburns-top">
             <div className="relative w-full h-[800px] bg-black/90 mt-0 ">
