@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const UsersOutLet = () => {
+const UsersLayout = () => {
     return (
         <>
             {/* define  the users Layout here  */}
@@ -10,6 +10,6 @@ const UsersOutLet = () => {
 
 }
 
-export default UsersOutLet;
+export default UsersLayout;
 
 

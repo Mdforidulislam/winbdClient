@@ -23,7 +23,7 @@ const LogIn = () => {
 
        // che the vaildation users 
        
-       const usersRole = 'subAdmin';
+       const usersRole = 'user';
        console.log(usersRole,'check the user role');
    
            if (!usersRole) {
