@@ -60,17 +60,14 @@ export const router = createBrowserRouter([
                 element: <Subnotifications />
             },
             {
-                path: "/dashboard/transtionReq",
-                element:<TransitionReq/>
-            },
-            {
                 path: "/dashboard/addNumber",
-                element:<AddtransitionCard/>
-            },
-            {
-                path:'/dashboard/addtranstion',
                 element:<AddTransition/>
             },
+            {
+                path: "/dashboard/TransitionRequest",
+                element:<TransitionReq/>
+            },
+          
             {
                 path:'/dashboard/allUsers',
                 element:<AllUsers/>

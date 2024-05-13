@@ -101,7 +101,7 @@ const DashNav = () => {
                 </li>
 
                 <li className=" ">
-                    <NavLink to={'/dashboard/transitionReq'} onClick={scrollToTop}>
+                    <NavLink to={'/dashboard/TransitionRequest'} onClick={scrollToTop}>
                         <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
                             <TbTransferIn className="text-2xl" />
                             <h1 className="">Transition Request</h1>
