@@ -18,35 +18,35 @@ const LogIn = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const rediection = useNavigate()
 
-   const onSubmit = data => {
-       console.log(data)
+    const onSubmit = data => {
+        console.log(data)
 
-       // che the vaildation users 
-       
-       const usersRole = 'user';
-       console.log(usersRole,'check the user role');
-   
-           if (!usersRole) {
-               rediection('/login')
-           } else {
-               switch (usersRole) {
-                   case 'admin':
-                       rediection('/dashboard/admin');
-                       break;
-                   case 'subAdmin':
-                       rediection('/dashboard/subAdmin');
-                       break;
-                   case 'user':
-                       rediection('/profile/user');
-                       break;
-                   default:
-                       rediection('/login')
-                       break;
-               }
-           }
+        // che the vaildation users 
+
+        const usersRole = 'admin';
+        console.log(usersRole, 'check the user role');
+
+        if (!usersRole) {
+            rediection('/login')
+        } else {
+            switch (usersRole) {
+                case 'admin':
+                    rediection('/dashboard/admin');
+                    break;
+                case 'subAdmin':
+                    rediection('/dashboard/subAdmin');
+                    break;
+                case 'user':
+                    rediection('/profile/user');
+                    break;
+                default:
+                    rediection('/login')
+                    break;
+            }
+        }
     };
 
-    
+
 
     return (
         <div className="kenburns-top">
