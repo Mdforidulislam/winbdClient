@@ -19,6 +19,10 @@ const LogIn = () => {
     const onSubmit = data => {
         console.log(data)
 
+
+
+        // firebase authentication 
+
         // che the vaildation users 
 
         const usersRole = 'admin';
@@ -60,10 +64,10 @@ const LogIn = () => {
 
                         <div className=' '>
                             <div className="  max-w-80 w-full h-[80px]  space-y-1  ">
-                                <label className=" text-base text-white font-semibold">Enter Your Password</label>
+                                <label className=" text-base text-white font-semibold">Enter Your Email</label>
                                 <div>
-                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium  focus:border-orange-400  text-base font-medium  py-1 px-2' placeholder="Enter Your Password" {...register("password", { required: true })} type="password" id="" />
-                                    {errors.password && <span className='text-red-600'>Enter Your Password Here</span>}
+                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium  focus:border-orange-400  text-base font-medium  py-2 px-2' placeholder="Enter Your Email" {...register("email", { required: true })} type="email" id="" />
+                                    {errors.email && <span className='text-red-600'>Enter Your Email Here</span>}
                                 </div>
                             </div>
                         </div>

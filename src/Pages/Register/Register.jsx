@@ -27,8 +27,8 @@ const Register = () => {
                             <div className="  max-w-80 w-full h-[80px]  space-y-1  ">
                                 <label className=" text-white text-base font-semibold">Enter Your Name</label>
                                 <div>
-                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium   text-base font-medium  py-1 px-2' placeholder="Enter Your Email" {...register("name", { required: true })} type="text" id="" />
-                                    {errors.email && <span className='text-red-600'>Enter Your Name Here</span>}
+                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium   text-base font-medium  py-1 px-2' placeholder="Enter Your Name" {...register("name", { required: true })} type="text" id="" />
+                                    {errors.name && <span className='text-red-600'>Enter Your Name Here</span>}
                                 </div>
                             </div>
 
@@ -37,7 +37,7 @@ const Register = () => {
                             <div className="  max-w-80 w-full h-[80px]  space-y-1  ">
                                 <label className=" text-white text-base font-semibold">Enter Your Email</label>
                                 <div>
-                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium   text-base font-medium  py-1 px-2' placeholder="Enter Your Email" {...register("name", { required: true })} type="text" id="" />
+                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium   text-base font-medium  py-1 px-2' placeholder="Enter Your Email" {...register("email", { required: true })} type="email" id="" />
                                     {errors.email && <span className='text-red-600'>Enter Your Email Here</span>}
                                 </div>
                             </div>
@@ -64,8 +64,8 @@ const Register = () => {
                             <div className="  max-w-80 w-full h-[80px]  space-y-1  ">
                                 <label className=" text-base text-white font-semibold">Confirm Your Phone Number</label>
                                 <div className="flex">
-                                    <input className='w-[260px] border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium  focus:border-orange-400  text-base font-medium   px-2' placeholder="Type Your Phone Number" {...register("password", { required: true })} type="password" id="" />
-                                    {errors.password && <span className='text-red-600'>Enter Your Phone Here</span>}
+                                    <input className='w-[260px] border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium  focus:border-orange-400  text-base font-medium   px-2' placeholder="Type Your Phone Number" {...register("number", { required: true })} type="number" id="" />
+                                    {errors.number && <span className='text-red-600'>Enter Your Phone Here</span>}
                                     <button className="border-2 px-2  hover:bg-[#131932]  font-semibold text-white">Send Otp</button>
                                 </div>
                             </div>
