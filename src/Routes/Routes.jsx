@@ -64,6 +64,11 @@ export const router = createBrowserRouter([
                 element:<PrivetRouter><AddNumber/></PrivetRouter>
             },
             {
+                path: "/dashboard/TransitionRequest",
+                element:<TransitionReq/>
+            },
+          
+            {
                 path:'/dashboard/allUsers',
                 element:<AllUsers/>
             }

@@ -46,7 +46,7 @@ export const Modal = ({
       >
         <div
           onClick={(e_) => e_.stopPropagation()}
-          className={`absolute w-full h-[70%] ${nextStep?'h-[70%]' : 'h-[80%]'} rounded-t-sm bg-[#333333] text-center drop-shadow-2xl dark:bg-gray-800 dark:text-white ${
+          className={`absolute w-full h-[70%] ${nextStep?'h-[70%]' : 'h-[100%]'} rounded-t-sm bg-[#333333] text-center drop-shadow-2xl dark:bg-gray-800 dark:text-white ${
             openModal
               ? "opacity-1 translate-y-0 duration-300"
               : "translate-y-20 opacity-0 duration-150"
@@ -92,7 +92,7 @@ export const Modal = ({
                 Make Payment
               </button>
             </div>
-          </div> : <div><Profile /></div> }
+          </div> : <div onClick={()=>setOpenModal(false)}><Profile /></div> }
 
            {/* profile importing here are  */}
 

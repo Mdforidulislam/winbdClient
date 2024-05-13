@@ -6,20 +6,20 @@
         "id":1
     },
     {
-        "img":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ec/7d/b6/ec7db672-d93d-0827-d49f-1e18b93ed623/AppIcon-1x_U007emarketing-0-7-0-sRGB-85-220-0.png/1200x630wa.png",
+        "img":"../src/assets/roket.png",
         "title":"rocket",
         "offer":"+15%",
         "descrip":"its ok or not",
         "id":2
     },
     {
-        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREF090FK9Ks_Z2IlfIJwGl-ulTAmR9om-QGA&usqp=CAU",
+        "img":"../src/assets/nogod.png",
         "title":"nagad",
         "descrip":"may be work",
         "id":3
     },
     {
-        "img":"https://play-lh.googleusercontent.com/7e6QoXWKpldVxOB6s1XTOLH6BWsT5TS8kfGOoPnS65bnViF4EbD35mrVh5PgP8xf7Q=w240-h480-rw",
+        "img":"../src/assets/upay.png",
         "title":"upay",
         "offer":"+15%"
     },

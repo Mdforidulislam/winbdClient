@@ -5,14 +5,11 @@ const PrivetRouter = ({ children }) => {
 
     const userLocation = useLocation()
    
-    const usersRole = 'subAdmin';
+    const usersRole = 'user';
 
     if (!usersRole) {
         return <div>loadin...</div>
     }
-
-    console.log(children);
-
 
     // =================================== start the router validation ==========================
     if (usersRole === 'user') {

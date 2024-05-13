@@ -8,7 +8,7 @@ const AdminDashboard = () => {
 
 
                 <DashNav className="" />
-                <div className="w-full flex-grow h-screen overflow-y-auto">
+                <div className="w-full px-8 flex-grow h-screen overflow-y-auto">
                     <Outlet></Outlet>
                 </div>
 

@@ -22,7 +22,7 @@ const PaymentMethod = ({number}) => {
             className="border flex w-full h-full items-center justify-center hover:border-[#DF8C45]"
           >
             <div className="text-center">
-              <img width={80} height={80} src={item?.img} alt="" />
+              <img width={60} height={60} src={item?.img} alt="" />
               <h1 className="text-white">{item?.title}</h1>
             </div>
           </div>
