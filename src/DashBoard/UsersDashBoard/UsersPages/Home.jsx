@@ -1,9 +1,12 @@
+
+
+
 const UserHome = () => {
     return (
-        <div>
-            <h1>im users </h1>
+        <div className="">
+              
         </div>
-    )
-}
+    );
+};
 
 export default UserHome;

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import GlobalTransition from '../../../Components/Shared/GlobalTransition';
+import WidthTable from '../../../Components/Shared/TransitoinReqtabs.jsx/WidthTable';
+import TransitionHistory from '../../../Components/Shared/TransitoinReqtabs.jsx/TransitionHistory';
+import DepositeTable from '../../../Components/Shared/TransitoinReqtabs.jsx/DepositeTable';
+
+
 
 const TransitionReq = () => {
   const [activeButton, setActiveButton] = useState(null);
@@ -12,21 +16,25 @@ const TransitionReq = () => {
 
   return (
     <div>
-      <div className="flex justify-center gap-20 ">
+      <div className="flex justify-center gap-20 mx-4 my-8 bg-[#1C2340] py-5">
         <button
-          className={`px-12 py-2 ${activeButton === 1 ? 'bg-[#233371] text-white font-bold' : 'bg-[#1C2340] text-white border-b font-semibold'}`}
+          className={`px-12 py-2 bg-[#1a285d]  hover:bg-[#3c497d]  ${activeButton === 1 ? 'bg-[#3a4fa3] text-white font-bold  ' : 'bg-[#1C2340] text-white  font-semibold capitalize transition ease-in-out duration-200 hover:-translate-x-1 hover:-translate-y-1'}`}
           onClick={() => handleButtonClick(1, 1)}
-        >
-          Deposit
-        </button>
-        <button
-          className={`px-12 py-2 ${activeButton === 2 ? 'bg-[#233371] text-white font-bold' : 'bg-[#1C2340] text-white border-b font-semibold'}`}
-          onClick={() => handleButtonClick(2, 2)}
         >
           Withdraw
         </button>
+
+
+
         <button
-          className={`px-12 py-2 ${activeButton === 3 ? 'bg-[#233371] text-white font-bold' : 'bg-[#1C2340] text-white border-b font-semibold'}`}
+          className={`px-12 py-2 bg-[#1a285d]  hover:bg-[#233371] ${activeButton === 2 ? 'bg-[#3a4fa3] text-white font-bold' : 'bg-[#1C2340] text-white  font-semibold capitalize transition ease-in-out duration-200 hover:-translate-x-1 hover:-translate-y-1'}`}
+          onClick={() => handleButtonClick(2, 2)}
+        >
+        
+          Deposit
+        </button>
+        <button
+          className={`px-12 py-2 bg-[#1a285d]  hover:bg-[#233371]  ${activeButton === 3 ? 'bg-[#3a4fa3] text-white font-bold' : 'bg-[#1C2340] text-white  font-semibold capitalize transition ease-in-out duration-200 hover:-translate-x-1 hover:-translate-y-1'}`}
           onClick={() => handleButtonClick(3, 3)}
         >
           History
@@ -35,25 +43,24 @@ const TransitionReq = () => {
 
       {/* Card 1 */}
       <div className="flex  mt-12">
-        <div className={`group relative   ${activeCard !== 1 ? 'hidden' : ''}`}>
-        
-          <GlobalTransition/>
+        <div className={`group relative mx-auto  ${activeCard !== 1 ? 'hidden' : ''}`}>
 
+    <WidthTable/>
         </div>
       </div>
 
       {/* Card 2 */}
-      <div className="flex bg-yellow-600">
-        <div className={`group relative mx-auto max-w-[350px] overflow-hidden bg-gradient-to-r from-[#3b99f1] via-[#4FB5FF] to-[#4FB5FF] px-6 py-6 text-white shadow ${activeCard !== 2 ? 'hidden' : ''}`}>
-          <h1 className='bg-blue-400 py-12 px-12'>hello world</h1>
+      <div className="flex mt-1">
+        <div className={`group relative mx-auto  ${activeCard !== 2 ? 'hidden' : ''}`}>
+        <DepositeTable/>
         </div>
       </div>
 
       {/* Card 3 */}
-      <div className="flex bg-gray-500">
-        <div className={`group relative mx-auto max-w-[350px] overflow-hidden bg-gradient-to-r from-[#3b99f1] via-[#4FB5FF] to-[#4FB5FF] px-6 py-6 text-white shadow ${activeCard !== 3 ? 'hidden' : ''}`}>
+      <div className="flex -mt-[60px]">
+        <div className={`group relative mx-auto ${activeCard !== 3 ? 'hidden' : ''}`}>
           {/* Card content */}
-          <h1 className='bg-red-400 py-12 px-12'>hello world</h1>
+          <TransitionHistory/>
         </div>
       </div>
     </div>

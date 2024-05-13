@@ -1,0 +1,41 @@
+[
+    {
+        "img":"../src/assets/img/bkash.png",
+        "title":"bkash",
+        "descrip":"try to make easy",
+        "id":1
+    },
+    {
+        "img":"../src/assets/img/roket.png",
+        "title":"rocket",
+        "offer":"+15%",
+        "descrip":"its ok or not",
+        "id":2
+    },
+    {
+        "img":"../src/assets/img/nagad.png",
+        "title":"nagad",
+        "descrip":"may be work",
+        "id":3
+    },
+    {
+        "img":"../src/assets/img/opai.png",
+        "title":"upay",
+        "offer":"+15%"
+    },
+    {
+        "img":"../src/assets/img/okmate.png",
+        "title":"OkWalet",
+        "offer":"+15%"
+    },
+    {
+        "img":"../src/assets/img/bitcon.png",
+        "title":"BTC",
+        "offer":"+15%"
+    },
+    {
+        "img":"../src/assets/img/local_bank.png",
+        "title":"local bank",
+        "offer":"+15%"
+    }
+]
