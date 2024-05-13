@@ -11,7 +11,7 @@ export const GlobalModal = () => {
 
     };
     return (
-        <div className="mx-auto flex w-72 items-center justify-center">
+        <div className=" flex w-72 items-center justify-start">
             <button onClick={() => setOpenModal(true)} className="rounded-md mt-4 bg-indigo-600 px-4 py-[6px] text-white">
                 Add Sub-Admin
             </button>

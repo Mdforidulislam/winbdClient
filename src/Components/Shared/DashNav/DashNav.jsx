@@ -51,18 +51,11 @@ const DashNav = () => {
               <NavLink to={"/dashboard/addSubAdmin"} onClick={scrollToTop}>
                 <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
                   <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                  <h1> Add Sub-Admin </h1>
-                </div>
-              </NavLink>
-            </li>
-            <li className=" ">
-              <NavLink to={""} onClick={scrollToTop}>
-                <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
-                  <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
                   <h1> All Sub-Admin </h1>
                 </div>
               </NavLink>
             </li>
+
           </ul> : userRole === 'subAdmin' ? <ul>
             {/*  all the condition and nave item here for subadmin  */}
             <li className=" ">

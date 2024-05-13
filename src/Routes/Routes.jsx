@@ -13,8 +13,9 @@ import UserHome from "../DashBoard/UsersDashBoard/UsersPages/Home";
 import PrivetRouter from "../MainLayOut/PrivetRouter/PrivetRouter";
 
 import AllUsers from "../DashBoard/Sub-Admindashboard/UsersManagment/AllUsers";
-import AdminHome from "../Components/AdminDash/AdminHome/AdminHome";
 import AddNumber from "../DashBoard/Sub-Admindashboard/AddTransation/AddNumber";
+import AdminHome from './../DashBoard/AdminDashBoard/AdminHome/AdminHome';
+import AllSubAdmin from "../DashBoard/AdminDashBoard/AllSubAdmin/AllSubAdmin";
 
 
 export const router = createBrowserRouter([
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
 
     {
         path: "/dashboard",
-        element: <PrivetRouter><AdminDashboard /></PrivetRouter>,  
+        element: <PrivetRouter><AdminDashboard /></PrivetRouter>,
         children: [
 
             // main admin dashboard router================================
@@ -45,27 +46,31 @@ export const router = createBrowserRouter([
                 path: "/dashboard/admin",
                 element: <PrivetRouter><AdminHome /></PrivetRouter>,
             },
+            {
+                path: "/dashboard/addSubAdmin",
+                element: <PrivetRouter><AllSubAdmin /></PrivetRouter>,
+            },
             //    --------------------- Subadmin dashboard  routes    ------------------------
             {
-                path:'/dashboard/subAdmin',
-                element:<PrivetRouter ><SubadminHome/></PrivetRouter>,
+                path: '/dashboard/subAdmin',
+                element: <PrivetRouter ><SubadminHome /></PrivetRouter>,
             },
             {
                 path: "/dashboard/notification",
-                element:<PrivetRouter><Subnotifications/></PrivetRouter>
-               
+                element: <PrivetRouter><Subnotifications /></PrivetRouter>
+
             },
             {
                 path: "/dashboard/transtionReq",
-                element:<PrivetRouter><TransitionReq/></PrivetRouter>
+                element: <PrivetRouter><TransitionReq /></PrivetRouter>
             },
             {
-                path:'/dashboard/addNumber',
-                element:<PrivetRouter><AddNumber/></PrivetRouter>
+                path: '/dashboard/addNumber',
+                element: <PrivetRouter><AddNumber /></PrivetRouter>
             },
             {
-                path:'/dashboard/allUsers',
-                element:<AllUsers/>
+                path: '/dashboard/allUsers',
+                element: <AllUsers />
             }
             // -------------------------------- all the end sub admin router =======================
         ]
@@ -77,8 +82,8 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/profile/user',
-                element: <PrivetRouter><UserHome/></PrivetRouter>
-           }
+                element: <PrivetRouter><UserHome /></PrivetRouter>
+            }
         ]
     }
 ]);

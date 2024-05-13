@@ -45,7 +45,12 @@ const PrivetRouter = ({ children }) => {
     } else if (usersRole === 'admin') {
         if (userLocation.pathname === '/dashboard/admin') {
             return children;
-        } else {
+        } else if
+            (userLocation.pathname === '/dashboard/addSubAdmin') {
+            return children
+        }
+
+        else {
             return <Navigate to="/login" replace={true} />
         }
     }
