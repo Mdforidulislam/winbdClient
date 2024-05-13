@@ -6,12 +6,12 @@ const MainLayout = () => {
 
     useEffect(() => {
         // Redirect to login page
-        navigate('/login');
+        // navigate('/login');
     }, [navigate]);
 
     return (
-        <div>  
-            <Outlet/>
+        <div>
+            <Outlet />
             {/* Render your layout content here */}
         </div>
     );

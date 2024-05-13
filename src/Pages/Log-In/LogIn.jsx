@@ -4,17 +4,15 @@ import { useForm } from "react-hook-form";
 
 
 // icon
-import { FaFacebook } from "react-icons/fa6";
-import { FaGoogle } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
-import { RiLockPasswordLine } from "react-icons/ri";
-import { SiAmazonsimpleemailservice } from "react-icons/si";
 import Button from "../../Components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 
 
 const LogIn = () => {
+    const [label, setlabel] = useState(false)
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const rediection = useNavigate()
 
@@ -49,61 +47,55 @@ const LogIn = () => {
 
 
     return (
-        <div className="kenburns-top">
-            <div className="relative w-full h-[800px] bg-black/90 mt-0 ">
-                <div className=" w-1/2 absolute  h-[400px] my-auto bg-black  bg1 top-20  left-72  text-white  ">
-                    <h1 className="pl-40 pt-20 text-5xl font-bold">Logo</h1>
-                    <h1 className="pl-40 pt-10 text-5xl font-bold">Sign In</h1>
-                    <div className="pt-20 pl-40 flex gap-10 ">
-                        <FaFacebook className="text-3xl hover:text-5xl " />
-                        <FaGoogle className="text-3xl hover:text-5xl" />
-                    </div>
+        <div className=" w-full flex min-h-screen bg-[#131932]">
+
+            <div className=" w-[600px]  bg-[#1C2340] mx-auto  h-full mt-20 rounded-2xl">
+                <div className=" mb-4">
+                    <FaUserAlt className=" text-7xl flex border-2 ml-64 -mt-5 bg-black rounded-full text-white " />
 
                 </div>
-                <div className="w-1/3  absolute h-[550px] top-20 right-40 bg-white rounded-3xl  ">
-                    <div className=" ">
-                        <FaUserAlt className=" text-7xl flex border-2 ml-48 -mt-5 bg-black rounded-full text-white " />
+                <h1 className="text-center text-white text-xl font-medium mb-10">Log In to <span className="text-2xl text-teal-500 font-bold">Name</span></h1>
+                <div className="pl-20 my-5 ">
+                    <form onSubmit={handleSubmit(onSubmit)} className='space-y-3 px-16 '>
 
-                    </div>
-                    <div className="pl-16">
-                        <form onSubmit={handleSubmit(onSubmit)} className='mt-10 mb-5 '>
-                            <div className='text-center mb-5  '>
-                                <div className="flex justify-center items-center gap-4 max-w-96 w-full h-[80px] px-10  bg-black rounded-full text-center ">
-                                    <SiAmazonsimpleemailservice className=" text-3xl text-white" />
-                                    <input className='w-full placeholder:text-slate-500 placeholder:font-medium rounded-xl leading-6 text-lg font-medium  py-3 px-4' placeholder="Enter Your User Id" {...register("email", { required: true })} type="email" id="" />
-                                    {errors.email && <span className='text-red-600'>Enter Your Email Here</span>}
+                        <div className=' '>
+                            <div className="  max-w-80 w-full h-[80px]  space-y-1  ">
+                                <label className=" text-base text-white font-semibold">Enter Your Password</label>
+                                <div>
+                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium  focus:border-orange-400  text-base font-medium  py-1 px-2' placeholder="Enter Your Password" {...register("password", { required: true })} type="password" id="" />
+                                    {errors.password && <span className='text-red-600'>Enter Your Password Here</span>}
                                 </div>
-
-                            </div>
-                            <div className='text-center '>
-                                <div className="flex justify-center items-center gap-4  max-w-96 w-full h-[80px] px-10  bg-black rounded-full text-center border-0 outline-none " >
-                                    <RiLockPasswordLine className=" text-3xl text-white" />
-                                    <input className='w-full placeholder:text-slate-500 placeholder:font-medium rounded-xl leading-6 text-lg font-medium  py-3 px-4' placeholder="Enter Your Password" {...register("password", { required: true })} type="password" id="" />
-                                    {errors.password && <span className='text-red-600'>Password dont match</span>}
-                                </div>
-                            </div>
-                            <div className=' text-center mt-5 -ml-20 '>
-                                <Button
-                                    divClass="hover:bg-teal-500 "
-                                    btnClass="hover:bg-black hover:text-white">Sign In</Button>
-                            </div>
-                        </form>
-                        <div className="absolute md:text-2xl font-semibold  md:font-bold pl-20 text-black "> <p className="my-4">New Here ? Please </p>
-                            <div className=' text-center mt-5  '>
-                                <Link to="/register">
-                                    <Button
-                                        divClass="hover:bg-teal-500 "
-                                        btnClass="hover:bg-black hover:text-white">Sign Up</Button>
-                                </Link>
                             </div>
                         </div>
-                    </div>
 
+                        <div className=' '>
+                            <div className="  max-w-80 w-full h-[80px]  space-y-1  ">
+                                <label className=" text-base text-white font-semibold">Enter Your Password</label>
+                                <div>
+                                    <input className='w-full border-2 border-slate-500/40 placeholder:text-slate-500 placeholder:font-medium  focus:border-orange-400 leading-6 text-lg font-medium  py-2 px-2' placeholder="Enter Your Password" {...register("password", { required: true })} type="password" id="" />
+                                    {errors.password && <span className='text-red-600'>Enter Your Password Here</span>}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-white">
+                            <button className=" font-normal">Forget Your Password?</button>
+                        </div>
+                        <div className=' text-center mt-5 -ml-20 '>
+                            <Button
+                                divClass="hover:bg-teal-600 "
+                                btnClass="hover:bg-[#131932] text-white">Sign In</Button>
+                        </div>
+                    </form>
+                    <div className="ml-24 text-white mt-4">
+                        <h1 className="text-base font-medium">Don&apos;t Have An Account? <span className="text-xl font-bold text-teal-500">Sign Up</span></h1>
+                    </div>
                 </div>
 
-
             </div>
+
+
         </div>
+
     );
 };
 
