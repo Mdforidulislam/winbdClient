@@ -5,7 +5,7 @@ const PrivetRouter = ({ children   }) => {
 
     const userLocation = useLocation()
    
-    const usersRole = 'user';
+    const usersRole = 'admin';
 
 
 

@@ -11,7 +11,7 @@ import { TbTransferIn } from "react-icons/tb";
 
 const DashNav = () => {
   const [open, setOpen] = useState(false);
-  const userRole = "subAdmin";
+  const userRole = "admin";
 
   return (
     <div className="w-full md:w-[350px] lg:h-screen p-5 bg-[#1C2340] text-white   ">
