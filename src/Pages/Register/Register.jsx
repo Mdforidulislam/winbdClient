@@ -1,18 +1,34 @@
 
 import { useForm } from "react-hook-form";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+
 
 
 // icon
 
-import { FaUserAlt } from "react-icons/fa";
 
 import Button from "../../Components/Button/Button";
+import app from './../../Firebase/Firebase.config';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
+    const auth = getAuth(app);
+
 
     const onSubmit = data => {
         console.log(data)
+        createUserWithEmailAndPassword(auth, data.email, data.password)
+            .then((res) => {
+
+                const user = res.user;
+                console.log("user", user);
+
+            })
+            .catch((error) => {
+                console.log(error);
+
+            });
 
     };
     return (
