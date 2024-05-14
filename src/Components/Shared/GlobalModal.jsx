@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Button from '../Button/Button';
+import "../Button/Button.css"
 
 export const GlobalModal = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -12,9 +13,11 @@ export const GlobalModal = () => {
     };
     return (
         <div className=" flex w-72 items-center justify-start">
-            <button onClick={() => setOpenModal(true)} className="rounded-md mt-4 bg-indigo-600 px-4 py-[6px] text-white">
-                Add Sub-Admin
-            </button>
+            <div onClick={() => setOpenModal(true)} className="box-1">
+                <div className="btn btn-one">
+                    <span>Add Sub-Admin</span>
+                </div>
+            </div>
             <div onClick={() => setOpenModal(false)} className={`fixed z-[100] flex items-center justify-center ${openModal ? 'opacity-1 visible' : 'invisible opacity-0'} inset-0 bg-black/20 backdrop-blur-sm duration-100`}>
                 <div onClick={(e_) => e_.stopPropagation()} className={`absolute w-[600px] rounded-lg bg-[#131932]  p-6 text-center drop-shadow-2xl dark:bg-gray-800 dark:text-white ${openModal ? 'opacity-1 translate-y-0 duration-300' : 'translate-y-20 opacity-0 duration-1000'}`}>
                     <div className="flex flex-col items-center justify-center space-y-4">
