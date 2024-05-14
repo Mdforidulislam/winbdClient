@@ -1,6 +1,7 @@
 
 import "./LogIn.css"
 import { useForm } from "react-hook-form";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
 // icon
@@ -8,6 +9,8 @@ import { FaUserAlt } from "react-icons/fa";
 import Button from "../../Components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import app from "../../Firebase/Firebase.config";
+// import app from './../../Firebase/Firebase.config';
 
 
 
@@ -15,6 +18,7 @@ const LogIn = () => {
     const [label, setlabel] = useState(false)
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const rediection = useNavigate()
+<<<<<<< HEAD
 
    const onSubmit = data => {
        console.log(data)
@@ -42,6 +46,53 @@ const LogIn = () => {
                        break;
                }
            }
+=======
+    const auth = getAuth(app);
+    const onSubmit = data => {
+        console.log(data)
+
+
+        // sign in
+        signInWithEmailAndPassword(auth, data.email, data.password)
+            .then((res) => {
+                // Signed in 
+                const loggedUser = res.user;
+                console.log(loggedUser);
+
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+
+
+
+        // firebase authentication 
+
+        // che the vaildation users 
+
+        const usersRole = 'admin';
+        console.log(usersRole, 'check the user role');
+
+        if (!usersRole) {
+            rediection('/login')
+        } else {
+            switch (usersRole) {
+                case 'admin':
+                    rediection('/dashboard/admin');
+                    break;
+                case 'subAdmin':
+                    rediection('/dashboard/subAdmin');
+                    break;
+                case 'user':
+                    rediection('/profile/user');
+                    break;
+                default:
+                    rediection('/login')
+                    break;
+            }
+        }
+>>>>>>> aa6546e78eadc84f73f807426e7753540c8b58eb
     };
 
 
@@ -87,14 +138,14 @@ const LogIn = () => {
                         </div>
                     </form>
                     <div className="ml-24 text-white mt-4">
-                        <h1 className="text-base font-medium">Don&apos;t Have An Account? <span className="text-xl font-bold text-teal-500">Sign Up</span></h1>
+                        <h1 className="text-base font-medium">Don&apos;t Have An Account? <Link><span className="text-xl font-bold text-teal-500">Sign Up</span></Link></h1>
                     </div>
                 </div>
 
             </div>
 
 
-        </div>
+        </div >
 
     );
 };
