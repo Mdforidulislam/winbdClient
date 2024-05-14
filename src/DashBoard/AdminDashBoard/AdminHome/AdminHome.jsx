@@ -6,8 +6,10 @@ import GlobalChart from './../../../Components/Shared/GlobalChart';
 import GlobalPichart from './../../../Components/Shared/GlobalPichart';
 
 
-
 const AdminHome = () => {
+    
+
+
     return (
         <div className="w-full h-full px-8 ">
             {/* header option */}

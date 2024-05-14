@@ -1,9 +1,6 @@
 import SubadminCard from "../../Components/Shared/CardGobal";
 import SubadminChart from "../../Components/Shared/GlobalChart";
 import SubadminPiechart from "../../Components/Shared/GlobalPichart";
-import UsertableList from "../../Components/Shared/GlobalTable";
-
-
 
 const SubadminHome = () => {
     return (
@@ -32,11 +29,6 @@ const SubadminHome = () => {
              
                 <SubadminPiechart />
                </div>
-            <UsertableList />
-          
-
-     
-         
         </div>
     );
 };

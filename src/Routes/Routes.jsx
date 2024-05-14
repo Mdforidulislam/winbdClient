@@ -47,12 +47,12 @@ export const router = createBrowserRouter([
                 element: <PrivetRouter><AdminHome /></PrivetRouter>,
             },
             {
-                path: "/dashboard/addSubAdmin",
+                path: "/dashboard/addSubAdmin/",
                 element: <PrivetRouter><AllSubAdmin /></PrivetRouter>,
             },
             //    --------------------- Subadmin dashboard  routes    ------------------------
             {
-                path: '/dashboard/subAdmin',
+                path: '/dashboard/subAdmin/',
                 element: <PrivetRouter ><SubadminHome /></PrivetRouter>,
             },
             {
