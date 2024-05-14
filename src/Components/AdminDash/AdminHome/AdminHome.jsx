@@ -29,7 +29,7 @@ const AdminHome = () => {
                 </div>
             </div>
             {/* all the card here  */}
-            <div className=" md:grid  md:grid-cols-4 gap-5 px-4">
+            <div className=" md:grid  md:grid-cols-4 gap-5 px-4 mt-10">
                 <DashboardCard
                     total={9}
                     CurrentStatus={"Admin"}
@@ -64,12 +64,12 @@ const AdminHome = () => {
                 />
 
             </div>
-            
+
             {/* here the graph chart */}
             <div className="block lg:flex gap-4">
                 <GlobalChart />
-                <GlobalPichart/>
-             </div>
+                <GlobalPichart />
+            </div>
         </div>
     );
 };

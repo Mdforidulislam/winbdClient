@@ -15,7 +15,7 @@ const Amount = ({number}) => {
             {/* Payment Method use here  */}
             <div>
                 <div>
-                    <h1 className="text-white">Amount</h1>
+                    <h1 className="text-white capitalize border-l-4 border-green-500 pl-1 rounded-sm">Amount</h1>
                 </div>
                 <div className="grid grid-cols-4 gap-5 mt-3">
                     {
