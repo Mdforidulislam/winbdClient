@@ -7,7 +7,6 @@ import GlobalPichart from './../../../Components/Shared/GlobalPichart';
 
 
 const AdminHome = () => {
-    
 
 
     return (
@@ -24,8 +23,6 @@ const AdminHome = () => {
                 <div className="space-x-4 flex justify-center items-center  gap-5">
                     <MdNotificationsActive className="text-3xl " />
                     <FaUserCircle className="text-5xl md:text-7xl" />
-
-
                 </div>
             </div>
             {/* all the card here  */}

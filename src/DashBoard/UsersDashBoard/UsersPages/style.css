@@ -1,3 +1,6 @@
+*{
+  overflow: hidden;
+}
 @keyframes bottomToTop {
     from {
       opacity: 0;

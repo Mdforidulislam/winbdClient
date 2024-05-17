@@ -6,12 +6,24 @@ import {
 import scrollToTop from "./ScrollToTop";
 import MenuClose from "../../SvgIcons/MenuClose";
 import MenuOpen from "../../SvgIcons/MenuOpen";
-import { useState } from "react";
-import { TbTransferIn } from "react-icons/tb";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../Authentication/Authentication";
+import { CiLogout } from "react-icons/ci";
+import { AiTwotoneProfile } from "react-icons/ai";
+import { MdPayment } from "react-icons/md";
+import { AiOutlineTransaction } from "react-icons/ai";
+import { FaUsers } from "react-icons/fa";
+import { BsFillShareFill } from "react-icons/bs";
 
 const DashNav = () => {
   const [open, setOpen] = useState(false);
-  const userRole = "subAdmin";
+  const { role } = useContext(AuthContext);
+
+  const adminInfo = JSON.parse(localStorage.getItem('userData'))?.userName;
+  
+  const handleAction = () => {
+    localStorage.removeItem('userData');
+  }
 
   return (
     <div className="w-full md:w-[350px] lg:h-screen p-5 bg-[#1C2340] text-white   ">
@@ -26,7 +38,7 @@ const DashNav = () => {
               onClick={scrollToTop}
               className="text-2xl md:text-3xl text-white font-semibold cursor-pointer "
             >
-              Logo
+            <h1 className="text-xl">{role}: {adminInfo}</h1>
             </h3>
           </NavLink>
 
@@ -38,7 +50,7 @@ const DashNav = () => {
         <hr className="mb-5 hidden md:flex w-4/5 mx-auto" />
         {/*  all the condtion and nav item here for admin  */}
         {
-          userRole === 'admin' ? <ul className=" hidden md:flex flex-col menu space-y-3  mb-28 ">
+          role === 'admin' ? <ul className=" hidden md:flex flex-col menu space-y-3  mb-28 ">
             <li className=" ">
               <NavLink to={"/dashboard/admin"} onClick={scrollToTop}>
                 <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl">
@@ -50,19 +62,29 @@ const DashNav = () => {
             <li className=" ">
               <NavLink to={"/dashboard/addSubAdmin"} onClick={scrollToTop}>
                 <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
-                  <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
+                  <AiTwotoneProfile  className="text-2xl font-semibold" />
                   <h1> All Sub-Admin </h1>
                 </div>
               </NavLink>
             </li>
 
-          </ul> : userRole === 'subAdmin' ? <ul>
+              {/*  logout system */}
+              <li onClick={handleAction} className=" ">
+              <NavLink >
+                <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl items-center">
+                  <CiLogout className="text-2xl font-semibold" />
+                  <span className="text-2xl text-white">Logout</span>
+                </div>
+              </NavLink>
+            </li>
+
+          </ul> : role === 'subAdmin' ? <ul>
             {/*  all the condition and nave item here for subadmin  */}
             <li className=" ">
               <NavLink to={"/dashboard/subAdmin"} onClick={scrollToTop}>
                 <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
                   <MdOutlineDashboardCustomize className="text-2xl font-semibold" />
-                  <h1> SubAdmin-Dashboard </h1>
+                  <h1>Dashboard </h1>
                 </div>
               </NavLink>
             </li>
@@ -79,7 +101,7 @@ const DashNav = () => {
             <li className=" ">
               <NavLink to={"/dashboard/addNumber"} onClick={scrollToTop}>
                 <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
-                  <MdOutlineNotificationsActive className="text-2xl" />
+                  <MdPayment className="text-2xl" />
                   <h1 className="">Add-Number</h1>
                 </div>
               </NavLink>
@@ -88,7 +110,7 @@ const DashNav = () => {
             <li className=" ">
               <NavLink to={"/dashboard/transtionReq"} onClick={scrollToTop}>
                 <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
-                  <TbTransferIn className="text-2xl" />
+                  <AiOutlineTransaction className="text-2xl" />
                   <h1 className="">Transition Request</h1>
                 </div>
               </NavLink>
@@ -97,12 +119,30 @@ const DashNav = () => {
             <li className=" ">
               <NavLink to={"/dashboard/allUsers"} onClick={scrollToTop}>
                 <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
-                  <TbTransferIn className="text-2xl" />
+                  <FaUsers className="text-2xl" />
                   <h1 className="">All-Users</h1>
                 </div>
               </NavLink>
+              </li>
+              {/* refer link here */}
+            <li className=" ">
+              <NavLink to={"/dashboard/refer"} onClick={scrollToTop}>
+                <div className="flex gap-2 items-center font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl   ">
+                  <BsFillShareFill className="text-2xl" />
+                  <h1 className="">share reffer link</h1>
+                </div>
+              </NavLink>
+              </li>
+              {/*  logout system */}
+              <li onClick={handleAction} className=" ">
+              <NavLink >
+                <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl items-center">
+                  <CiLogout className="text-2xl font-semibold" />
+                  <span className="text-2xl text-white">Logout</span>
+                </div>
+              </NavLink>
             </li>
-          </ul> : userRole === 'user' ? '' : null
+          </ul> : role === 'user' ? '' : null
         }
       </div>
 

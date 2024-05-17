@@ -1,24 +1,30 @@
-import { Navigate, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Authentication/Authentication";
 
 
 const PrivetRouter = ({ children }) => {
-
+    const { role} = useContext(AuthContext)
     const userLocation = useLocation()
+    const navigate = useNavigate()
    
-    const usersRole = 'subAdmin';
+    console.log(role, 'form privet rounter');
+    
 
-    if (!usersRole) {
-        return <div>loadin...</div>
+    if (!role) {
+       return  <Navigate to="/login" replace={true} />
     }
-
     // =================================== start the router validation ==========================
-    if (usersRole === 'user') {
+    if (role === 'user') {
         if (userLocation.pathname === '/profile/user') {
             return children;
-        } else {
+        } else if (userLocation.pathname === '/profile/confirmpay') {
+            return children;
+        }
+        else {
             return <Navigate to="/login" replace={true} />
         }
-    } else if (usersRole === 'subAdmin') {
+    } else if (role === 'subAdmin') {
         if (userLocation.pathname === '/dashboard/subAdmin') {
             return children;
         } else if (userLocation.pathname === '/dashboard/notification') {
@@ -31,12 +37,14 @@ const PrivetRouter = ({ children }) => {
             return children;
         } else if (userLocation.pathname === '/dashboard/allUsers') {
             return children;
+        } else if (userLocation.pathname === '/dashboard/refer') {
+            return children;
         }
         else {
             return <Navigate to="/login" replace={true} />
         }
 
-    } else if (usersRole === 'admin') {
+    } else if (role === 'admin') {
         if (userLocation.pathname === '/dashboard/admin') {
             return children;
         } else if

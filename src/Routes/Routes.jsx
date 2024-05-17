@@ -16,6 +16,8 @@ import AllUsers from "../DashBoard/Sub-Admindashboard/UsersManagment/AllUsers";
 import AddNumber from "../DashBoard/Sub-Admindashboard/AddTransation/AddNumber";
 import AdminHome from './../DashBoard/AdminDashBoard/AdminHome/AdminHome';
 import AllSubAdmin from "../DashBoard/AdminDashBoard/AllSubAdmin/AllSubAdmin";
+import ConfirmPay from "../DashBoard/UsersDashBoard/UsersPages/ConfirmPay";
+import ReferralRegistrationPage from "../DashBoard/Sub-Admindashboard/RefferLink/ReferLink";
 
 
 export const router = createBrowserRouter([
@@ -71,6 +73,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/allUsers',
                 element: <AllUsers />
+            },
+            {
+                path: '/dashboard/refer',
+                element:<PrivetRouter><ReferralRegistrationPage/></PrivetRouter>
             }
             // -------------------------------- all the end sub admin router =======================
         ]
@@ -83,6 +89,10 @@ export const router = createBrowserRouter([
             {
                 path: '/profile/user',
                 element: <PrivetRouter><UserHome /></PrivetRouter>
+            },
+            {
+                path: '/profile/confirmpay',
+                element:<PrivetRouter><ConfirmPay/></PrivetRouter>
             }
         ]
     }

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import UpdateModal from "./UpdateModal";
 
 const AddNumber = () => {
-    const [allPaymentMethod, setAllPaymentMehod] = useState([])
+  const [allPaymentMethod, setAllPaymentMehod] = useState([]); // set the payment mehtod 
 
 
   // here all the payment mehtod logo
@@ -13,7 +13,11 @@ const AddNumber = () => {
     nogod: "https://i.ibb.co/sWWFpwC/image-removebg-preview-74.png",
     rocket: "https://i.ibb.co/D7b7vpq/image.png",
     };
-    
+  
+  // geitng athurization access from the others access
+
+    const getUniqueIdLocal = JSON.parse(localStorage.getItem('userData'))?.uniqueId;
+
 
   // ================================ start input fild handlefunction =======================
   const handleAllValue = (e) => {
@@ -24,10 +28,10 @@ const AddNumber = () => {
     const number = formData.get("number");
     const transactionType = formData.get("transactionType");
       
-      
+
     const transactionMethod = formData.get("transactionMethod");
     const paymentLogoDynamice = paymenetLogo[transactionMethod]
-    const paymenetList = { number, transactionType, transactionMethod, Logo: paymentLogoDynamice , author:'foridul' }
+    const paymenetList = { number, transactionType, transactionMethod, Logo: paymentLogoDynamice, authorId: getUniqueIdLocal };
       
       //   ======================== add tranaction number ==========================
       
@@ -65,18 +69,20 @@ const AddNumber = () => {
     // ========================= geting paymentMethod face  ==============================
     
     useEffect(() => {
-        axios.get('http://localhost:5000/getingPaymentmethod')
-            .then(data => {
-                setAllPaymentMehod(data.data.getingPaymentMehod);
-                console.log(data.data);
-        })
+      if (getUniqueIdLocal) {
+        axios.get(`http://localhost:5000/getingPaymentmethod?uniqueId=${getUniqueIdLocal}`)
+        .then(data => {
+            setAllPaymentMehod(data.data.getingPaymentMehod);
+            console.log(data.data);
+    })
+       }
     },[])
     
     
     // ====================== configuration active and deactive and update ===========================
 
-    const handleConfiguration = (number,id) => {
-        console.log(status);
+  const handleConfiguration = (number, id) => {
+      
         axios.patch("http://localhost:5000/updatePaymentMethod/", {number,id}, {
             headers: {
               "Content-Type": "application/json",
@@ -131,6 +137,7 @@ const AddNumber = () => {
               <option selected>Select personal or agent</option>
               <option value={"personal"}>Personal</option>
               <option value={"agent"}>Agent</option>
+              <option value={"payment"}>payment</option>
             </select>
           </div>
 

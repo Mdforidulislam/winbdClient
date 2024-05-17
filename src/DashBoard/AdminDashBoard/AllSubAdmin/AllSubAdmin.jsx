@@ -34,7 +34,7 @@ const AllSubAdmin = () => {
     axios.get(`http://localhost:5000/getingDataSubAdmin?search=${search}&pageNumber=${pageNumber}`
       )
       .then((res) => {
-        setDataSubAdmin(res.data.exiteAdminResult);
+        setDataSubAdmin(res.data.subAdminUser);
         setSubAdminCount(res.data.exiteDataLength);
       });
   }, [search, pageNumber]);

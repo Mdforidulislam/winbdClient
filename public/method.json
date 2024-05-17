@@ -1,35 +1,35 @@
 [
     {
-        "img":"https://www.logo.wine/a/logo/BKash/BKash-Icon2-Logo.wine.svg",
+        "img":"https://bjbaji555.live/images/web/thirdparty/bkash.png",
         "title":"bkash",
         "descrip":"try to make easy",
         "id":1
     },
     {
-        "img":"../src/assets/roket.png",
+        "img":"https://bjbaji555.live/images/web/thirdparty/rocket.png",
         "title":"rocket",
         "offer":"+15%",
         "descrip":"its ok or not",
         "id":2
     },
     {
-        "img":"../src/assets/nogod.png",
-        "title":"nagad",
+        "img":"https://bjbaji555.live/images/web/thirdparty/nagad.png",
+        "title":"nogod",
         "descrip":"may be work",
         "id":3
     },
     {
-        "img":"../src/assets/upay.png",
+        "img":"https://bjbaji555.live/images/web/thirdparty/upay.png",
         "title":"upay",
         "offer":"+15%"
     },
     {
-        "img":"https://pngtom.com/files/preview/960x960/31702136575vvv2qhmvmjhe6rhlfaierhhkzfdmyhtetbrhscle39ly0dvud2e0i8yltmq4kiyzyak0k0kexkohvuxag6puifhivx1ytkwy3cbj.png",
+        "img":"https://bjbaji555.live/images/web/thirdparty/okwallet.png",
         "title":"OkWalet",
         "offer":"+15%"
     },
     {
-        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt7GA0ktSZ2DHYIrsVgro7iUrxxyCXoJrhrHBQuGlJgcbQZP-HkIlHYRpC6Rg2nZ5tDvU&usqp=CAU",
+        "img":"https://bjbaji555.live/images/web/thirdparty/bank-card.png",
         "title":"local bank",
         "offer":"+15%"
     }

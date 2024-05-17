@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const MainLayout = () => {
     const navigate = useNavigate();
+    const location = useLocation()
 
     useEffect(() => {
-        // Redirect to login page
-        // navigate('/login');
-    }, [navigate]);
+
+      
+    }, [navigate,location]);
 
     return (
         <div>

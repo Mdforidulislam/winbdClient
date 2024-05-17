@@ -1,13 +1,19 @@
 
 import { useState } from 'react';
 
-export const Pagination = () => {
+export const Pagination = ({storeData,setPageNumbers}) => {
     const [pageNumber, setPageNumber] = useState(0)
-    const page = 5 // Adjust the page numbers the way you want
+    const page = storeData?.totalPageNumber; // Adjust the page numbers the way you want
     const updatePageNumber = (num) => {
         if ((num > (page - 1)) || (0 > num)) { return setPageNumber(0) }
         setPageNumber(num)
     }
+
+    if (setPageNumbers) {
+        setPageNumbers(pageNumber)
+    }
+
+
     return (
         <div className='flex select-none justify-center items-center gap-5 mb-5'>
             {/* left arrow */}
