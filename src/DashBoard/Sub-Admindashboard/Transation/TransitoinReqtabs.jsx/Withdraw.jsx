@@ -16,7 +16,7 @@ const Withdraw = () => {
     useEffect(() => {
         const trnasctionWithdraw = async () => {
             if (localData) {
-                const serverData = await axios.get(`http://localhost:5000/transactionReqWith?authurId=${localData}`)
+                const serverData = await axios.get(`https://pay-winbd-server.vercel.app/transactionReqWith?authurId=${localData}`)
                 setStoreData(serverData?.data?.queryWithDrawData)
                 console.log(serverData);
             }

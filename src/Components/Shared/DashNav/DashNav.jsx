@@ -17,12 +17,14 @@ import { BsFillShareFill } from "react-icons/bs";
 
 const DashNav = () => {
   const [open, setOpen] = useState(false);
-  const { role } = useContext(AuthContext);
+  const { role ,setRole} = useContext(AuthContext);
 
   const adminInfo = JSON.parse(localStorage.getItem('userData'))?.userName;
   
   const handleAction = () => {
     localStorage.removeItem('userData');
+    setRole('undefine')
+
   }
 
   return (
@@ -48,6 +50,7 @@ const DashNav = () => {
         </div>
 
         <hr className="mb-5 hidden md:flex w-4/5 mx-auto" />
+
         {/*  all the condtion and nav item here for admin  */}
         {
           role === 'admin' ? <ul className=" hidden md:flex flex-col menu space-y-3  mb-28 ">
@@ -64,6 +67,15 @@ const DashNav = () => {
                 <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
                   <AiTwotoneProfile  className="text-2xl font-semibold" />
                   <h1> All Sub-Admin </h1>
+                </div>
+              </NavLink>
+            </li>
+
+            <li className=" ">
+              <NavLink to={"/dashboard/instructionPay/"} onClick={scrollToTop}>
+                <div className="flex gap-2  font-medium hover:bg-blue-700/40 py-2  px-3 rounded-3xl ">
+                  <AiTwotoneProfile  className="text-2xl font-semibold" />
+                  <h1> Add Instraction Payment</h1>
                 </div>
               </NavLink>
             </li>

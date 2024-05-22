@@ -15,7 +15,7 @@ const ConfirmPay = () => {
     const [showmassage, setShowMassage] = useState(''); // set error massage 
     const [userNumber, setuserNumber] = useState(''); // set number 
     const [localUser, setLocaluser] = useState({}); // get local user data
-
+    const [redirect, setRedirect] = useState(false);  // set redirection false or true valuse set for after 2 sec later redirection 
     
    
     
@@ -74,7 +74,7 @@ const ConfirmPay = () => {
         const showUsnerInfo = async () => {
             if (userName) {
                 try {
-                    const searhUserData = await axios.get(`http://localhost:5000/getingRegUser?userName=${userName}`)
+                    const searhUserData = await axios.get(`https://pay-winbd-server.vercel.app/getingRegUser?userName=${userName}`)
                     const getingUsers = searhUserData?.data?.phoneNumber;
                     setuserNumber(getingUsers);
                     console.log(searhUserData, 'geting number');
@@ -93,7 +93,7 @@ const ConfirmPay = () => {
         if (author && transType && method) {
             const fetchData = async () => {
                 try {
-                    const response = await fetch(`http://localhost:5000/showPaymentNumber?author=${author}&transType=${transType}&method=${method}`);
+                    const response = await fetch(`https://pay-winbd-server.vercel.app/showPaymentNumber?author=${author}&transType=${transType}&method=${method}`);
                     const convert = await response.json();
                     setShowNumber(convert?.isExitePaymentMehtod)
                     console.log(convert);
@@ -128,7 +128,7 @@ const ConfirmPay = () => {
         
         if (Object.keys(transactionInfo).every(item => item)) {
             try {
-            const insertData = await axios.post('http://localhost:5000/insertTransaction',transactionInfo);
+            const insertData = await axios.post('https://pay-winbd-server.vercel.app/insertTransaction',transactionInfo);
                 console.log(insertData.data);
                 if (insertData.data.message === 'Transaction inserted successfully') {
                     setShowMassage(insertData.data.message)
@@ -154,9 +154,19 @@ const ConfirmPay = () => {
     }
 
     // return the home page
-    if (minutes === 0 && seconds === 0 ) {
-        return  <Navigate to="/profile/user" replace={true} />
-    }
+    useEffect(() => {
+        if (showmassage === 'Transaction inserted successfully') {
+          const timer = setTimeout(() => {
+            setRedirect(true);
+          }, 1000); // 2000 milliseconds = 2 seconds
+    
+          return () => clearTimeout(timer); // Cleanup timeout if the component unmounts
+        }
+      }, [showmassage, minutes, seconds]);
+    
+      if (redirect) {
+        return <Navigate to="/profile/user" replace={true} />;
+      }
 
 
     console.log(showNumber);

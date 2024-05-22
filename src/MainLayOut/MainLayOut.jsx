@@ -7,8 +7,8 @@ const MainLayout = () => {
 
     useEffect(() => {
 
-      
-    }, [navigate,location]);
+      navigate('/login')
+    }, []);
 
     return (
         <div>

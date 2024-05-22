@@ -18,11 +18,13 @@ const Authentication = ({ children }) => {
   const [registerInfo, setRegisterInfo] = useState({});
   const [error, setError] = useState('');
   const [userSearchData, setUserSearchData] = useState([]); // set users search data history data here 
+  const [optionValue, setOptionValue] = useState('এক্সট্রা ১.৫% ডিপোজিট বোনাস'); // set the promotion opton set here 
+  const [rediectionDW, setrediectionDW] = useState('');
   //==================== ahutentication data ============================ 
 
   const loginUserNamePassword = async(userName, password) => {
     try {
-      const res = await fetch(`http://localhost:5000/userValidation?userName=${userName}&password=${password}`);
+      const res = await fetch(`https://pay-winbd-server.vercel.app/userValidation?userName=${userName}&password=${password}`);
       const data = await res.json()
       setRole(data?.role);
 
@@ -40,7 +42,7 @@ const Authentication = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/userValidation?userName=${userInfo.userName}&password=${userInfo.password}`);
+        const res = await fetch(`https://pay-winbd-server.vercel.app/userValidation?userName=${userInfo.userName}&password=${userInfo.password}`);
         const data = await res.json()
         setRole(data?.role)
         setRegisterInfo(data)
@@ -103,11 +105,6 @@ const handleAction = (amount) => {
     console.log(transationInfo);
  }
 
-
-  
-  
-  
-
   // context provide value 
   const authInfo = {
     loginUserNamePassword,
@@ -124,7 +121,10 @@ const handleAction = (amount) => {
     error,
     channel,
     setUserSearchData,
-    userSearchData
+    userSearchData,
+    setOptionValue,
+    optionValue,
+    setrediectionDW
   };
   
   return (

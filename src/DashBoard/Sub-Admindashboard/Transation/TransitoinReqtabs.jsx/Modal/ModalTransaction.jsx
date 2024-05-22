@@ -14,7 +14,7 @@ const ModalTransaction = ({item}) => {
         console.log(transactionid, 'check the form value ');
         try {
 
-            const updateResponsce = await axios.put(`http://localhost:5000/transactionFeedback?status=${transactionid}&id=${item._id}`);
+            const updateResponsce = await axios.put(`https://pay-winbd-server.vercel.app/transactionFeedback?status=${transactionid}&id=${item._id}`);
             const getingResponsce = updateResponsce.data;
             console.log(getingResponsce);
             if (getingResponsce.message === 'Request status updated successfully') {
@@ -44,7 +44,7 @@ const ModalTransaction = ({item}) => {
 
     const updateTheTransactionRequest = async (status) => {
         try {
-            const updateResponsce = await axios.put(`http://localhost:5000/transactionFeedback?status=${status}&id=${item._id}`);
+            const updateResponsce = await axios.put(`https://pay-winbd-server.vercel.app/transactionFeedback?status=${status}&id=${item._id}`);
             const getingResponsce = updateResponsce.data;
             console.log(getingResponsce);
 

@@ -1,7 +1,7 @@
 import "./LogIn.css";
 import { useForm } from "react-hook-form";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../Authentication/Authentication";
 
 const LogIn = () => {
@@ -15,15 +15,17 @@ const LogIn = () => {
         loginUserNamePassword(data.userName, data.password);  
   };
 
-    // Check the validation of users based on their roles
-    if (role === 'user') {
-      navigate('/profile/user', { replace: true });
-    } else if (role === 'subAdmin') {
-      navigate('/dashboard/subAdmin', { replace: true });
-    } else if (role === 'admin') {
-      navigate('/dashboard/admin', { replace: true });
-    }
+  // set bydefault login with redirection from the register page 
 
+          // Check the validation of users based on their roles
+          if (role === 'user') {
+            navigate('/profile/user', { replace: true });
+          } else if (role === 'subAdmin') {
+            navigate('/dashboard/subAdmin', { replace: true });
+          } else if (role === 'admin') {
+            navigate('/dashboard/admin', { replace: true });
+          }
+      
 
 
   return (

@@ -31,7 +31,7 @@ const AllSubAdmin = () => {
   // =============================== data face for see all subamin ===========================
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/getingDataSubAdmin?search=${search}&pageNumber=${pageNumber}`
+    axios.get(`https://pay-winbd-server.vercel.app/getingDataSubAdmin?search=${search}&pageNumber=${pageNumber}`
       )
       .then((res) => {
         setDataSubAdmin(res.data.subAdminUser);

@@ -3,13 +3,19 @@ import Nav from "./Navbar/Nav";
 
 const UserHome = () => {
   return (
-    <div className="w-full h-full">
-      <div className=" bg-[#0C745C]">
-        <Nav />
-      </div>{" "}
-      {/* import nave item here */}
-      <Tabs /> {/* import table list here   */}
-    </div>
+ <div className="min-h-screen h-full flex flex-col sticky top-0">
+            {/* Sticky section */}
+            <div className="w-full">
+                <div className="bg-[#34AF83] h-[50px] w-full z-20">
+                    <Nav />
+                </div>
+    
+              <div className="z-20">
+                   <Tabs />
+              </div>
+          
+            </div>
+        </div>
   );
 };
 

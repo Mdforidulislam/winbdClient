@@ -18,6 +18,7 @@ import AdminHome from './../DashBoard/AdminDashBoard/AdminHome/AdminHome';
 import AllSubAdmin from "../DashBoard/AdminDashBoard/AllSubAdmin/AllSubAdmin";
 import ConfirmPay from "../DashBoard/UsersDashBoard/UsersPages/ConfirmPay";
 import ReferralRegistrationPage from "../DashBoard/Sub-Admindashboard/RefferLink/ReferLink";
+import PaymentInstraction from "../DashBoard/AdminDashBoard/PaymentInstaction/PaymentInstraction";
 
 
 export const router = createBrowserRouter([
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/addSubAdmin/",
                 element: <PrivetRouter><AllSubAdmin /></PrivetRouter>,
+            },
+            {
+                path: '/dashboard/instructionPay/',
+                element: <PrivetRouter><PaymentInstraction/></PrivetRouter>
             },
             //    --------------------- Subadmin dashboard  routes    ------------------------
             {

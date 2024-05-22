@@ -17,7 +17,7 @@ export const ModalSub = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/insertSubAdmin", data, {
+    axios.post("https://pay-winbd-server.vercel.app/insertSubAdmin", data, {
       headers: {
         "Content-Type": "application/json",
       }

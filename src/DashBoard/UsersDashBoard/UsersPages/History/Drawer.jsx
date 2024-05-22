@@ -17,20 +17,20 @@ const Drawer = ({ isOpen, onClose }) => {
   },[])
 
 
-/// =========================== search value geting by default  ==================================
+
+  /// =========================== search value geting by default  ==================================
 
   useEffect(() => {
     const getingSearchValue = async () => {
       if ( userName ) {
-        const getingResponse = await axios.get(`http://localhost:5000/userHistory?userName=${userName}`);
+        const getingResponse = await axios.get(`https://pay-winbd-server.vercel.app/userHistory?userName=${userName}`);
         const userSearchData = getingResponse?.data?.data;
         setUserSearchData(userSearchData); 
-       }
+      }
     }
     getingSearchValue()
   },[userName,setUserSearchData])
 
-  
     // save the status 
   const handleButtonClick = (type, value) => {
       const jsonValue = JSON.stringify(value);
@@ -49,32 +49,30 @@ const Drawer = ({ isOpen, onClose }) => {
     if (!isOpen) {
       return null;
   }
+
+  
+
+
+
   
   ///======================= search by filter data inser users search history data get ==========================
   const handleActiongetingValueGeting = async () => {
         try {
           if (selectedStatus && selectedPaymentType && selectedDate && userName ) {
-            const getingResponse = await axios.get(`http://localhost:5000/userHistory?status=${selectedStatus}&paymentType=${selectedPaymentType}&date=${selectedDate}&userName=${userName}`);
+            const getingResponse = await axios.get(`https://pay-winbd-server.vercel.app/userHistory?status=${selectedStatus}&paymentType=${selectedPaymentType}&date=${selectedDate}&userName=${userName}`);
             const userSearchData = getingResponse.data.data;
             setUserSearchData(userSearchData); 
            }
         } catch (error) { console.log(error) }
   };
   
-
- 
-
-  
-
-  
-  
     return (
       <div
-      className={`fixed top-0 ${isOpen ? 'left-0 duration-300' : 'right-0'} w-full h-full bg-gray-800 bg-opacity-90 transition-transform transform  duration-900`}
+      className={`fixed top-0  ${isOpen ? 'left-0 duration-300' : 'right-0'} w-full bg-gray-900 h-screen bg-opacity-90 transition-transform transform  duration-900`}
       style={{ zIndex: 50, transitionDuration: '3s' }} // Adjust duration as needed
     >
     <div className="">
-        <div className="bg-gray-900 text-white w-full  p-6 rounded-lg shadow-lg h-full items-center ">
+        <div className="bg-gray-900 text-white w-full  p-6 rounded-lg shadow-lg  items-center ">
             <div className=" ">
             <div className="flex justify-between flex-row-reverse items-center h-full ">
                     <h2 className="text-xl font-bold mb-4">Transaction Record Filter</h2>
@@ -92,7 +90,7 @@ const Drawer = ({ isOpen, onClose }) => {
                   onClick={() => handleButtonClick('status', status)}
                   className={`px-4 py-2 rounded ${selectedStatus === status ? 'bg-[#14805E]' : 'bg-gray-600'}`}
                 >
-                  {status}
+                  <p className="capitalize">{status}</p>
                 </button>
               ))}
             </div>
@@ -107,7 +105,7 @@ const Drawer = ({ isOpen, onClose }) => {
                   onClick={() => handleButtonClick('paymentType', type)}
                   className={`px-4 py-2 rounded ${selectedPaymentType === type ? 'bg-[#14805E]' : 'bg-gray-600'}`}
                 >
-                  {type}
+                 <h1 className="capitalize">{type}</h1>
                 </button>
               ))}
             </div>

@@ -12,7 +12,7 @@ const UpdateModal = ({id}) => {
 
         console.log(number);
         // update api call here
-        axios.patch("http://localhost:5000/updatePaymentMethod/", {number,id}, {
+        axios.patch("https://pay-winbd-server.vercel.app/updatePaymentMethod/", {number,id}, {
             headers: {
               "Content-Type": "application/json",
             }

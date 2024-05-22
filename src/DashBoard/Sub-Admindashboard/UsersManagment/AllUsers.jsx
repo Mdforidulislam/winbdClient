@@ -24,7 +24,7 @@ const AllUsers = () => {
     useEffect(() => {
         const userDataget = async () => {
             try {
-                const userSearch = await axios(`http://localhost:5000/getinguse?uniqueId=${uniqueId}&searchValue=${searchData}&pageNumber=${pageNumber}`);
+                const userSearch = await axios(`https://pay-winbd-server.vercel.app/getinguse?uniqueId=${uniqueId}&searchValue=${searchData}&pageNumber=${pageNumber}`);
                 const getuserData = userSearch.data;
                 console.log(getuserData);
                 setStoerData(getuserData);

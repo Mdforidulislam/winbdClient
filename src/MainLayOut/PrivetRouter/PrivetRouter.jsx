@@ -1,29 +1,29 @@
 import { useContext } from "react";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Authentication/Authentication";
-
 
 const PrivetRouter = ({ children }) => {
     const { role} = useContext(AuthContext)
     const userLocation = useLocation()
-    const navigate = useNavigate()
    
     console.log(role, 'form privet rounter');
     
 
-    if (!role) {
+    if (!role || role === 'undefine' || role === undefined) {
        return  <Navigate to="/login" replace={true} />
     }
     // =================================== start the router validation ==========================
     if (role === 'user') {
-        if (userLocation.pathname === '/profile/user') {
+    if (userLocation.pathname === '/profile/user') {
             return children;
-        } else if (userLocation.pathname === '/profile/confirmpay') {
+    } else if (userLocation.pathname === '/profile/confirmpay') {
             return children;
-        }
+    }
         else {
             return <Navigate to="/login" replace={true} />
-        }
+    }
+
+    //  retur isTrue the admin or subadmin and users , role is true as time return the admin panel  so return request page 
     } else if (role === 'subAdmin') {
         if (userLocation.pathname === '/dashboard/subAdmin') {
             return children;
@@ -49,7 +49,9 @@ const PrivetRouter = ({ children }) => {
             return children;
         } else if
             (userLocation.pathname === '/dashboard/addSubAdmin') {
-            return children
+            return children;
+        } else if (userLocation.pathname === '/dashboard/instructionPay/') {
+            return children;
         }
 
         else {

@@ -24,13 +24,13 @@
         "offer":"+15%"
     },
     {
-        "img":"https://bjbaji555.live/images/web/thirdparty/okwallet.png",
-        "title":"OkWalet",
+        "img":"https://img.b112j.com/bj/h5/assets/images/icon-set/player/crypto/eth.svg?v=1716276589846&source=mcdsrc",
+        "title":"ETH",
         "offer":"+15%"
     },
     {
-        "img":"https://bjbaji555.live/images/web/thirdparty/bank-card.png",
-        "title":"local bank",
+        "img":"https://img.b112j.com/bj/h5/assets/images/icon-set/player/crypto/btc.svg?v=1716276589846&source=mcdsrc",
+        "title":"BTC",
         "offer":"+15%"
     }
 ]

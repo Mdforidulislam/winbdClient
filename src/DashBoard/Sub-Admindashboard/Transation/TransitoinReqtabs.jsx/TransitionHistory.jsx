@@ -16,7 +16,7 @@ const TransitionHistory = () => {
 
     useEffect(() => {
         const getingHistoryData = async () => {
-            const getingHistory = await axios.get(`http://localhost:5000/getingHistory?authorId=${authorId}`);
+            const getingHistory = await axios.get(`https://pay-winbd-server.vercel.app/getingHistory?authorId=${authorId}`);
             const convertData = getingHistory?.data?.requestApprovdeData;
             console.log(convertData);
             setStoreHistory(convertData);
